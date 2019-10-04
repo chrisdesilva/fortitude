@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -52,8 +53,8 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
         },
         {
           name: `twitter:creator`,

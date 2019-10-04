@@ -1,3 +1,53 @@
+#navbar {
+  display: flex;
+}
+
+#navbar__logo img {
+  max-height: 75px;
+}
+
+#leadContent {
+  text-align: center;
+  color: #f7f7f7;
+  height: 65vh;
+  grid-column: span 3;
+  padding: 2rem;
+  background-image: url("../images/listening_to_coach_athan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  grid-row: 0/1;
+  grid-column: 0/3;
+}
+
+.btn {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  transition: all 500ms;
+  background-color: #2A83EB;
+  box-shadow: inset 0 0 0 0 #F01E13;
+  color: #f7f7f7;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: inset 400px 0 0 0 #F01E13;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -218,7 +268,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
   margin-left: 0;
