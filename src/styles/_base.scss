@@ -1,0 +1,50 @@
+// resets, variables, mixins, and utils
+
+// ----- BREAKPOINTS ----- //
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$breakpoint-sm}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$breakpoint-md}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$breakpoint-lg}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$breakpoint-xl}) {
+      @content;
+  }
+}
+
+// ----- COLORS ----- //
+
+$strive-blue: #2A83EB;
+
+$strive-red: #F01E13;
+$x-light-red: rgb(240, 226, 226);
+
+$black: rgb(20, 20, 20);
+
+// ----- FONTS ----- //
+
+$font-body: 'Lato', sans-serif;
+$font-header: 'Anton', sans-serif;

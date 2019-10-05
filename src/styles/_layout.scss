@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Lato&display=swap');
+
+.container {
+
+}
+
 #leadContent {
   text-align: center;
   color: #f7f7f7;
-  height: 65vh;
   background-image: url("../images/listening_to_coach_athan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,63 +14,61 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-}
+  padding: 10rem 1rem;
 
-#leadContent h1 {
-  text-transform: capitalize;
-  font-size: 3rem;
-}
-
-#navbar {
-  display: flex;
-}
-
-#navbar__logo img {
-  max-height: 75px;
-}
-
-.btn {
-  padding: .5rem 1rem;
-  border-radius: 5px;
-  border: none;
-  transition: all 500ms;
-  background-color: #2A83EB;
-  box-shadow: inset 0 0 0 0 #F01E13;
-  color: #f7f7f7;
-}
-
-.btn:hover {
-  cursor: pointer;
-  box-shadow: inset 400px 0 0 0 #F01E13;
-}
-
-
-@media (min-width:1000px){
-
-  #leadContent {
-    grid-column: span 3;
-    padding: 2rem;
+  h1 {
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
   }
+}
+
+// .joinUs {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+
+// @media (min-width:1000px){
+
+//   #leadContent {
+//     grid-column: span 3;
+//     padding: 2rem;
+//   }
   
-  #hero {
-    grid-row: 0/1;
-    grid-column: 0/3;
-  }
+//   #hero {
+//     grid-row: 0/1;
+//     grid-column: 0/3;
+//   }
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
-  }
+//   .container {
+//     display: grid;
+//     grid-template-columns: .5fr 1fr .5fr;
+//     grid-template-rows: 1fr 1fr .25fr 1fr .25fr;
+//     grid-gap: 10px;
+//     background: rgb(29, 29, 29)
+//   }
 
-  .joinUs {
-    grid-column: span 3;
-    text-align: center;
-  }
+//   .joinUs {
+//     grid-column: 2/3;
+//     background-color: rgb(143, 175, 212);
+//     padding: 2rem;
+//   }
 
-}
+//   .schedule {
+//     grid-column: 0/1;
+//     background-color: #2A83EB;
+//     grid-row: 2/4;
+//   }
+
+//   .contact {
+//     grid-column: 3/4;
+//     background-color: #2A83EB;
+//     grid-row: 2/5;
+//   }
+
+// }
 
 html {
   font-family: sans-serif;
@@ -269,7 +272,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: $font-body;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -298,8 +301,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -315,8 +317,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -332,8 +333,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -349,8 +349,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -366,8 +365,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -383,8 +381,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font-header;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;

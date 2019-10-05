@@ -1,0 +1,239 @@
+a {
+  text-decoration: none;
+  font-family: $font-header;
+  text-transform: uppercase;
+}
+
+.btn {
+  align-self:center;
+  background:transparent;
+  padding:.5rem .75rem;
+  margin:0 1rem;
+  transition:all .5s ease;
+  color:$x-light-red;
+  font-size:1rem;
+  letter-spacing:1px;
+  outline:none;
+  box-shadow: 20px 38px 34px -26px rgba(24, 24, 24, 0.2);
+  border:solid 3px $x-light-red;
+  text-decoration: none;
+  transition: all 300ms;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow:2px 8px 4px -6px rgba(26, 26, 26, 0.3);
+    background: $x-light-red;
+    color: $black;
+  }
+}
+
+// mobile navbar with hamburger menu
+#navbar {
+  display: grid;
+  background: $x-light-red;
+  grid-template-columns: 8rem 1fr 8rem;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas: 
+    "closed closed closed"
+    "......  open  ......";
+
+    @include md {
+      display: none;
+    }
+
+  .bar {
+    display: block;
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    background: $strive-blue;
+    transition: all .25s;
+  }
+
+  &-closed {
+    grid-area: closed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &-open {
+    grid-area: open;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+    padding: 2rem;
+    margin: 1rem 0;
+
+    @include sm {
+      width: 14rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+
+    a {
+      margin-bottom: 1rem;
+      color: $strive-red;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      background: $strive-blue;
+      border-color: $black;
+      color: $black;
+    }
+
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    
+    width:30px;
+    height:25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 1rem;
+  }
+}
+
+// navbar with visible links for tablets and up
+#navbar--md {
+  display: none;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $x-light-red;
+  }
+
+  &__logo {
+    width: 12rem;
+    margin: 1rem 1rem;
+  }
+
+
+  &-open {
+    margin-right: 1rem;
+
+    @include lg {
+      margin-right: 2rem;
+    }
+
+    @include xl {
+      margin-right: 5rem;
+    }
+
+  }
+
+  &__links {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+
+    a {
+      margin-right: 2rem;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    // underline hover effect on nav links
+    .link {
+      position: relative;
+      transition: all 300ms;
+
+      &:after,
+      &:before {
+        transition: all 300ms;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: $black;
+        height: 2px;
+      }
+
+      &:hover:after {
+        width: 75%;
+      }
+    }
+
+    .btn {
+      background: $strive-blue;
+      border-color: $black;
+      color: $black;
+    }
+  }
+}
+
+// .animate #navbar_hamburger:nth-child(1) {
+//   transform:translateY(40px) rotate(135deg);
+// }
+
+// .animate #navbar_hamburger:nth-child(2) {
+//   opacity: 0;
+// }
+
+// .animate #navbar_hamburger:nth-child(3) {
+//   transform:translateY(-40px) rotate(-135deg);
+// }
+
+
+.bar {
+  display: block;
+  
+  width:100%;
+  
+  background: $strive-blue;
+  
+  transition:0.25s;
+  -webkit-transition:0.25s;
+  
+-webkit-user-select: none;
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;          
+}
+
+.animate .bar:nth-child(1) {
+  transform:translateY(8px) rotate(135deg);
+  background: $strive-red;
+}
+
+.animate .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.animate .bar:nth-child(3) {
+  transform:translateY(-8px) rotate(-135deg);
+  background: $strive-red;
+}
+
