@@ -1,17 +1,7 @@
-#navbar {
-  display: flex;
-}
-
-#navbar__logo img {
-  max-height: 75px;
-}
-
 #leadContent {
   text-align: center;
   color: #f7f7f7;
   height: 65vh;
-  grid-column: span 3;
-  padding: 2rem;
   background-image: url("../images/listening_to_coach_athan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,11 +9,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
-#hero {
-  grid-row: 0/1;
-  grid-column: 0/3;
+#leadContent h1 {
+  text-transform: capitalize;
+  font-size: 3rem;
+}
+
+#navbar {
+  display: flex;
+}
+
+#navbar__logo img {
+  max-height: 75px;
 }
 
 .btn {
@@ -41,11 +40,31 @@
   box-shadow: inset 400px 0 0 0 #F01E13;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
+
+@media (min-width:1000px){
+
+  #leadContent {
+    grid-column: span 3;
+    padding: 2rem;
+  }
+  
+  #hero {
+    grid-row: 0/1;
+    grid-column: 0/3;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .joinUs {
+    grid-column: span 3;
+    text-align: center;
+  }
+
 }
 
 html {
