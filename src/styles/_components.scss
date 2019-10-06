@@ -19,22 +19,39 @@ a {
   text-decoration: none;
   transition: all 300ms;
 
+  &--primary {
+    background: $strive-blue;
+    border-color: $black;
+    color: $black;
+  }
+
   &:hover {
     cursor: pointer;
     box-shadow:2px 8px 4px -6px rgba(26, 26, 26, 0.3);
-    background: $x-light-red;
+    background: $strive-red;
     color: $black;
   }
 }
 
 // mobile navbar with hamburger menu
+.navbar {
+  background: transparent;
+  
+
+  &__opacity {
+    background: $x-light-red;
+  }
+}
+
 #navbar {
   display: grid;
-  background: $x-light-red;
-  grid-template-columns: 8rem 1fr 8rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  grid-template-columns: 4rem 1fr 4rem;
   grid-template-rows: 4rem 1fr;
   grid-template-areas: 
-    "closed closed closed"
+    "...... ...... closed"
     "......  open  ......";
 
     @include md {
@@ -44,9 +61,8 @@ a {
   .bar {
     display: block;
     width: 100%;
-    height: 10%;
+    height: 15%;
     margin-top: 10%;
-    background: $strive-blue;
     transition: all .25s;
   }
 
@@ -74,7 +90,7 @@ a {
 
   &__logo {
     width: 12rem;
-    padding: 2rem;
+    padding: 0 1rem;
     margin: 1rem 0;
 
     @include sm {
@@ -93,14 +109,8 @@ a {
 
     a {
       margin-bottom: 1rem;
-      color: $strive-red;
-      text-transform: uppercase;
-    }
-
-    .btn {
-      background: $strive-blue;
-      border-color: $black;
       color: $black;
+      text-transform: uppercase;
     }
 
   }
@@ -114,105 +124,17 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 }
 
-// navbar with visible links for tablets and up
-#navbar--md {
-  display: none;
-
-  @include md {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $x-light-red;
-  }
-
-  &__logo {
-    width: 12rem;
-    margin: 1rem 1rem;
-  }
-
-
-  &-open {
-    margin-right: 1rem;
-
-    @include lg {
-      margin-right: 2rem;
-    }
-
-    @include xl {
-      margin-right: 5rem;
-    }
-
-  }
-
-  &__links {
-    font-family: 'Anton', sans-serif;
-    letter-spacing: 2px;
-
-    a {
-      margin-right: 2rem;
-      color: $black;
-      text-transform: uppercase;
-    }
-
-    // underline hover effect on nav links
-    .link {
-      position: relative;
-      transition: all 300ms;
-
-      &:after,
-      &:before {
-        transition: all 300ms;
-      }
-
-      &:after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 0%;
-        content: '.';
-        color: transparent;
-        background: $black;
-        height: 2px;
-      }
-
-      &:hover:after {
-        width: 75%;
-      }
-    }
-
-    .btn {
-      background: $strive-blue;
-      border-color: $black;
-      color: $black;
-    }
-  }
-}
-
-// .animate #navbar_hamburger:nth-child(1) {
-//   transform:translateY(40px) rotate(135deg);
-// }
-
-// .animate #navbar_hamburger:nth-child(2) {
-//   opacity: 0;
-// }
-
-// .animate #navbar_hamburger:nth-child(3) {
-//   transform:translateY(-40px) rotate(-135deg);
-// }
-
-
+// navbar hamburger animation
 .bar {
   display: block;
   
   width:100%;
   
-  background: $strive-blue;
+  background: $black;
   
   transition:0.25s;
   -webkit-transition:0.25s;
@@ -236,4 +158,89 @@ a {
   transform:translateY(-8px) rotate(-135deg);
   background: $strive-red;
 }
+
+
+// navbar with visible links for tablets and up
+#navbar--md {
+  display: none;
+
+  @include md {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+  }
+
+  &__logo {
+    width: 6rem;
+    margin: 1rem 1rem;
+  }
+
+
+  &-open {
+    margin-right: 1rem;
+
+    @include lg {
+      margin-right: 2rem;
+    }
+
+    @include xl {
+      margin-right: 5rem;
+    }
+
+  }
+
+  &__links {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+
+    a {
+      margin-right: 2rem;
+      color: $strive-red;
+      text-transform: uppercase;
+    }
+
+    // underline hover effect on nav links
+    .link {
+      position: relative;
+      transition: all 300ms;
+
+      &:after,
+      &:before {
+        transition: all 300ms;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: $strive-blue;
+        height: 2px;
+      }
+
+      &:hover:after {
+        width: 75%;
+      }
+    }
+
+    .btn--primary {
+      background: $strive-blue;
+      border-color: black;
+      color: white;
+
+      &:hover {
+        background: $strive-red;
+      }
+    }
+  }
+}
+
 
