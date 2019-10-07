@@ -1,0 +1,215 @@
+.container {
+  @include md {
+    display: grid;
+    grid-template-columns: .4fr 1.2fr .4fr;
+    grid-template-rows: .75fr 1fr 200px .5fr;
+    grid-template-areas:
+    "leadContent leadContent leadContent"
+    "schedule joinUs pricing"
+    "schedule joinUs pricing"
+    "left     middle   right"
+  }
+}
+
+.leadContent {
+  text-align: center;
+  color: #f7f7f7;
+  background-image: url("../images/listening_to_coach_athan_sm.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12rem 1rem;
+  grid-area: leadContent;
+
+  @include md {
+    background-image: url("../images/listening_to_coach_athan.jpg");
+  }
+
+  h1 {
+    letter-spacing: 2px;
+  }
+
+  &__span {
+    display: block;
+
+    @include md {
+      display: inline;
+    }
+
+  }
+}
+
+.joinUs {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  grid-area: joinUs;
+
+  @include md {
+    padding: 6rem 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0 .5rem 0;
+    font-size: 2rem;
+  }
+
+  &__span {
+    display: block;
+    margin: .5rem 0;
+    font-family: $font-header;
+    font-size: 1.25rem;
+  }
+
+  &--redText {
+    color: $strive-red;
+  }
+
+  &__check {
+    font-size: .75rem;
+    color: $strive-red;
+  }
+}
+
+.schedule {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: darken($strive-blue, 25);
+  transition: all 300ms;
+  color: white;
+  grid-area: schedule;
+
+  @include md {
+    margin: 1rem 0 10px 10px;
+    background-color: lighten($color: $black, $amount: 5);
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 300ms;
+    margin-top: 1rem;
+
+    &:hover {
+      color: $strive-red;
+      cursor: pointer;
+    }
+  }
+
+  table {
+
+    margin: 0;
+
+    tr {
+      td, th {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  text-align: center;
+  grid-area: pricing;
+  background-color: darken($strive-red, 25);
+  color: white;
+
+  @include md {
+    margin: 1rem 10px 10px 0;
+    background-color: lighten($color: $black, $amount: 10);
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.bottomPhotos {
+  background-color: lighten($color: $black, $amount: 5);
+  padding: 1rem;
+
+  img {
+    border-radius: 5px;
+  }
+
+  @include md {
+    background-color: darken($strive-blue, 25);
+  }
+}
+
+.left {
+  display: none;
+
+  @include md {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+.middle {
+  @include md {
+    grid-area: middle;
+  }
+}
+
+.right {
+  display: none;
+
+  @include md{
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: darken($color: $black, $amount: 5);
+  color: white;
+  padding: 3rem 1rem;
+
+  &__links {
+    margin-bottom: 1rem;
+
+    a {
+      color: white;
+      font-size: 2rem;
+      margin: 0 1rem;
+      transition: all 300ms;
+
+      &:hover {
+        color: $strive-blue;
+      }
+    }
+  }
+
+
+}
+

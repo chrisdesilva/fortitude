@@ -1,0 +1,12 @@
+.container--classes {
+  grid-template-columns: .4fr 1.2fr .4fr;
+  grid-template-rows: 4rem 1fr 1fr;
+  grid-template-areas: 
+  ".....    .....    ....."
+  "..... leadContent ....."
+}
+
+.leadContent--classes {
+  grid-area: leadContent;
+  color: $black;
+}

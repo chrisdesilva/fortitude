@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { Collapse } from 'react-collapse'
@@ -8,9 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import { FaCheckSquare, FaDumbbell, FaFire, FaHeartbeat } from 'react-icons/fa'
-import rowing from "../images/rowing.jpg"
-import laughing from "../images/laughing_on_rower.jpg"
-import kids from "../images/kids_exercising.jpg"
 
 const IndexPage = () => {
 
@@ -20,7 +16,49 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "pushups_bumpers.jpg" }) {
+      pushups: file(relativePath: { eq: "pushups_bumpers.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      kids: file(relativePath: { eq: "kids_exercising.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      rowing: file(relativePath: { eq: "rowing.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      fullGym: file(relativePath: { eq: "full_gym.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      laughing: file(relativePath: { eq: "laughing_on_rower.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pushpress: file(relativePath: { eq: "push_press.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      kbswings: file(relativePath: { eq: "single_arm_swings.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -38,8 +76,8 @@ const IndexPage = () => {
         <div className="leadContent">
           <h1>
             <span className="leadContent__span">You’ll sweat. </span> 
-            <span className="leadContent__span">you’ll laugh. </span> 
-            <span className="leadContent__span">you’ll get stronger. </span> 
+            <span className="leadContent__span">You’ll laugh. </span> 
+            <span className="leadContent__span">You’ll get stronger. </span> 
             <span className="leadContent__span">We promise.</span> 
           </h1>
           <a className="btn btn-primary" href="https://crossfitstrivebastrop.wodify.com/OnlineSalesPortal/ViewSchedule.aspx?LocationId=4207&IsMobile=False&OnlineMembershipId=48149" target="_blank" rel="noreferrer noopener">Sign Me Up</a>
@@ -50,17 +88,17 @@ const IndexPage = () => {
           <p>
             Welcome to CrossFit Strive! Our mission is to empower people to be happier, healthier, and more successful in life. We’re a family first, CrossFit gym second. Whatever your health and fitness goals are, our experienced coaches and supportive members will help you get there.   We promise to teach you, hold you accountable, and cheer you on every step of the way. 
           </p>
-          <p>
-            Click the button below to sign up for two free weeks!
+          <p style={{fontSize: '1.5rem', display: `inline`}}>
+            <strong>Click the button below to sign up for <span className="joinUs--redText">two free weeks!</span></strong>
           </p>
           <a className="btn btn--primary" href="https://crossfitstrivebastrop.wodify.com/OnlineSalesPortal/ViewSchedule.aspx?LocationId=4207&IsMobile=False&OnlineMembershipId=48149" target="_blank" rel="noreferrer noopener">Sign Me Up</a>
 
-          <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={data.file.childImageSharp.fluid} /></div>
+          <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={data.pushups.childImageSharp.fluid} /></div>
           <h2>Do you want to...</h2>
-              <span><FaCheckSquare className="joinUs__check" /> lose weight?</span>
-              <span><FaCheckSquare className="joinUs__check" /> feel healthier?</span>
-              <span><FaCheckSquare className="joinUs__check" /> challenge yourself?</span>
-              <span><FaCheckSquare className="joinUs__check" /> have fun?</span>
+              <span className="joinUs__span"><FaCheckSquare className="joinUs__check" /> lose weight?</span>
+              <span className="joinUs__span"><FaCheckSquare className="joinUs__check" /> feel healthier?</span>
+              <span className="joinUs__span"><FaCheckSquare className="joinUs__check" /> challenge yourself?</span>
+              <span className="joinUs__span"><FaCheckSquare className="joinUs__check" /> have fun?</span>
           <h2 style={{marginTop: `1.45rem`, fontSize: `3rem`}}>COME JOIN US!</h2>
         </div>
 
@@ -158,14 +196,17 @@ const IndexPage = () => {
           <p>20% off for active military, first responders, vetarans, and teachers</p>
         </div>
 
-        <div className="bottomPhotos rowing">
-          <img src={rowing} alt="athletes exercising on rowing machines"/>
+        <div className="bottomPhotos left">
+          <Img fluid={data.rowing.childImageSharp.fluid} alt="Athletes exercising on rowing machines"/>
+          <Img fluid={data.kbswings.childImageSharp.fluid} alt="Athletes performing single arm kettlebell swings"/>
         </div>
-        <div className="bottomPhotos laughing">
-          <img src={laughing} alt="women laughing while on rowing machines"/>
+        <div className="bottomPhotos middle">
+          <Img fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>
         </div>
-        <div className="bottomPhotos kids">
-          <img src={kids} alt="kids working out in fitness class"/>
+        <div className="bottomPhotos right">
+          <Img fluid={data.kids.childImageSharp.fluid} alt="Kids exercising in fitness class"/>
+          <Img fluid={data.laughing.childImageSharp.fluid} alt="Women laughing on rowing machines"/>  
+          <Img fluid={data.pushpress.childImageSharp.fluid} alt="Woman lifting a barbell overhead"/>  
         </div>
 
       </div>
