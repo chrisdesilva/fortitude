@@ -7,7 +7,7 @@ import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaPhone } fr
 import Header from "./header"
 import "../styles/main.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }, props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} scroll={props.scroll}/>
       <div>
         <main>{children}</main>
         <footer className="footer">

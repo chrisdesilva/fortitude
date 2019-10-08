@@ -1,12 +1,34 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Collapse } from 'react-collapse'
 import logo from "../images/strive_logo.png"
+import animateScrollTo from 'animated-scroll-to'
 
-const Header = ({ siteTitle }) => {
+const Header = (props) => {
 
   const [isMenuOpen, toggleMenu] = useState(false)
+  const [navBackground, setNavBackground] = useState(false)
+  const navRef = useRef()
+  
+  navRef.current = navBackground
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50
+      if (navRef.current !== show){
+        setNavBackground(show)
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const scrollToForm = () => {
+    animateScrollTo(document.querySelector('.joinUs'))
+    showForm(true)
+  }
 
   return (
     <>
@@ -33,7 +55,7 @@ const Header = ({ siteTitle }) => {
 
     </header>
 
-    <header id="navbar--md">
+    <header className={navBackground && "showNav"} id="navbar--md">
       
       <div id="navbar--md__logo">
         <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
@@ -44,7 +66,7 @@ const Header = ({ siteTitle }) => {
             <Link className="link" to="/classes">Classes</Link>
             <Link className="link" to="/about">About</Link>
             <Link className="link" to="/reviews">Reviews</Link>
-            <a className="btn btn--primary" href="https://crossfitstrivebastrop.wodify.com/OnlineSalesPortal/ViewSchedule.aspx?LocationId=4207&IsMobile=False&OnlineMembershipId=48149" target="_blank" rel="noreferrer noopener">Sign Me Up</a>
+            <button onClick={props.scroll} className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>
 
