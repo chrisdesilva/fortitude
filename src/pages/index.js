@@ -141,7 +141,7 @@ const IndexPage = () => {
           {!form && <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={data.pushups.childImageSharp.fluid} /></div>}
 
           <Collapse isOpened={form}>
-            <form className="form" onSubmit={handleSubmit}>
+            <form name="strive-contact" className="form" onSubmit={handleSubmit}>
               {!thankYou &&
                 <React.Fragment>
                   <label htmlFor="name">Name</label>
