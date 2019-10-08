@@ -162,7 +162,7 @@ const IndexPage = () => {
                     <button onClick={chooseMoreInfo} className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
                   </div>
 
-                  <button className="btn btn--primary">Sign me up</button>
+                  <button type="submit" className="btn btn--primary">Sign me up</button>
                 </React.Fragment>
               }
               <Collapse isOpened={thankYou}><p>{thankYou}</p></Collapse>
