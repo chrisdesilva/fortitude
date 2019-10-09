@@ -249,8 +249,8 @@ const IndexPage = () => {
 
                   <div className="form__buttons">
                     <span>I want...</span>
-                    <button onClick={chooseTwoweeks} value="Two free weeks" name="reason" className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
-                    <button onClick={chooseMoreInfo} value="More info" name="reason" className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
+                    <input onClick={chooseTwoweeks} value="Two free weeks" name="reason" className={twoWeeks ? "btn btn--form selected" : "btn btn--form"} />
+                    <input onClick={chooseMoreInfo} value="More info" name="reason" className={moreInfo ? "btn btn--form selected" : "btn btn--form"} />
                   </div>
 
                   <button type="submit" className="btn btn--primary">Sign me up</button>
