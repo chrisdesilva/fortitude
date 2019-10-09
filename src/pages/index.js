@@ -214,8 +214,8 @@ const IndexPage = () => {
           {!form && <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={data.pushups.childImageSharp.fluid} /></div>}
 
           <Collapse isOpened={form}>
-            <form name="strive-contact" className="form" onSubmit={handleSubmit}>
-              <input type="hidden" name="strive-contact" value="strive-contact" />
+            <form name="strive-contact" className="form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="strive-contact" />
               {!thankYou &&
                 <React.Fragment>
                   <label htmlFor="name">Name</label>
@@ -232,8 +232,8 @@ const IndexPage = () => {
 
                   <div className="form__buttons">
                     <span>I want...</span>
-                    <button onClick={chooseTwoweeks} className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
-                    <button onClick={chooseMoreInfo} className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
+                    <button onClick={chooseTwoweeks} name="free" className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
+                    <button onClick={chooseMoreInfo} name="info" className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
                   </div>
 
                   <button type="submit" className="btn btn--primary">Sign me up</button>
@@ -361,9 +361,8 @@ const IndexPage = () => {
           <input type='text' name='name' />
           <input type='email' name='email' />
           <input type='tel' name='phone' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-          <input type='button' name='identity' />
-          <input type='button' name='identity' />
-          <input type='button' name='identity' />
+          <input type='button' name='free' />
+          <input type='button' name='info' />
           <input type='text' name='otherDescription' />
           <textarea name='comments' />
         </form>
