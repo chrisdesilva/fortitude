@@ -1,13 +1,14 @@
-import React, { useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React, { useEffect, useRef, useState } from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { Collapse } from 'react-collapse'
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { FaCheckSquare, FaDumbbell, FaFire, FaHeartbeat } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaPhone, FaCheckSquare, FaDumbbell, FaFire, FaHeartbeat } from 'react-icons/fa'
 import animateScrollTo from 'animated-scroll-to'
+import logo from "../images/strive_logo.png"
+import "../styles/main.scss"
 
 const IndexPage = () => {
 
@@ -54,6 +55,24 @@ const IndexPage = () => {
     animateScrollTo(document.querySelector('.joinUs'))
     showForm(true)
   }
+
+  const [isMenuOpen, toggleMenu] = useState(false)
+  const [navBackground, setNavBackground] = useState(false)
+  const navRef = useRef()
+  
+  navRef.current = navBackground
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50
+      if (navRef.current !== show){
+        setNavBackground(show)
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const data = useStaticQuery(graphql`
     query {
@@ -106,11 +125,65 @@ const IndexPage = () => {
           }
         }
       }
+      humble: file(relativePath: { eq: "humble_hustle.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      rolling: file(relativePath: { eq: "rolling_out.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   return (
-    <Layout scroll={scrollToForm}>
+    <div>
+
+      <header id="navbar" className={isMenuOpen ? "navbar__opacity" : "navbar"}>
+        <div id="navbar-closed">
+          <div onClick={() => toggleMenu(!isMenuOpen)} id="navbar__hamburger"  className={isMenuOpen ? "animate" : null}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+        </div>
+
+        <div id="navbar-open">
+          <Collapse isOpened={isMenuOpen}>
+            <div id="navbar__links">
+              <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
+              <Link to="/classes">Classes</Link>
+              <Link to="/about">About</Link>
+              <Link to="/reviews">Reviews</Link>
+              <a className="btn btn--primary" href="https://crossfitstrivebastrop.wodify.com/OnlineSalesPortal/ViewSchedule.aspx?LocationId=4207&IsMobile=False&OnlineMembershipId=48149" target="_blank" rel="noreferrer noopener">Sign Me Up</a>
+            </div>
+          </Collapse>
+        </div>
+
+      </header>
+
+      <header className={navBackground ? "showNav" : undefined} id="navbar--md">
+        
+        <div id="navbar--md__logo">
+          <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
+        </div>
+
+        <div id="navbar--md-open">
+            <div id="navbar--md__links">
+              <Link className="link" to="/classes">Classes</Link>
+              <Link className="link" to="/about">About</Link>
+              <Link className="link" to="/reviews">Reviews</Link>
+              <button onClick={scrollToForm} className="btn btn--primary">Sign Me Up</button>
+            </div>
+        </div>
+
+      </header>
       <SEO title="Home" />
       <div className="container">
         
@@ -142,6 +215,7 @@ const IndexPage = () => {
 
           <Collapse isOpened={form}>
             <form name="strive-contact" className="form" onSubmit={handleSubmit}>
+              <input type="hidden" name="strive-contact" value="strive-contact" />
               {!thankYou &&
                 <React.Fragment>
                   <label htmlFor="name">Name</label>
@@ -156,8 +230,8 @@ const IndexPage = () => {
                   <label htmlFor="comments">Questions/Comments</label>
                   <input onChange={handleInputChange} type="textarea" name="comments" placeholder="Your inquiry..." value={values.comments}/>
 
-                  <span>I want...</span>
                   <div className="form__buttons">
+                    <span>I want...</span>
                     <button onClick={chooseTwoweeks} className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
                     <button onClick={chooseMoreInfo} className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
                   </div>
@@ -180,7 +254,7 @@ const IndexPage = () => {
         <div className="schedule">
           <h2>Schedule</h2>
           <p>Click a class below to check the schedule</p>
-          <span onClick={() => toggleCrossfit(!isCrossfitOpen)} className={isCrossfitOpen && "strive-red"}><FaHeartbeat/><p>CrossFit</p></span>
+          <span onClick={() => toggleCrossfit(!isCrossfitOpen)} className={isCrossfitOpen ? "strive-red" : undefined}><FaHeartbeat/><p>CrossFit</p></span>
             <Collapse isOpened={isCrossfitOpen}>
               <table className="schedule--crossfit__table">
                 <tbody>
@@ -205,7 +279,7 @@ const IndexPage = () => {
                 </tbody>
               </table>
             </Collapse>
-          <span onClick={() => togglePumpBurn(!isPumpBurnOpen)} className={isPumpBurnOpen && "strive-red"}><FaFire /><p>Pump 30/Burn 30</p></span>
+          <span onClick={() => togglePumpBurn(!isPumpBurnOpen)} className={isPumpBurnOpen ? "strive-red" : undefined}><FaFire /><p>Pump 30/Burn 30</p></span>
             <Collapse isOpened={isPumpBurnOpen}>
               <table className="schedule--crossfit__table">
                 <tbody>
@@ -230,7 +304,7 @@ const IndexPage = () => {
                 </tbody>
               </table>
             </Collapse>
-          <span onClick={() => toggleBarbell(!isBarbellOpen)} className={isBarbellOpen && "strive-red"}><FaDumbbell /><p> Barbell Club</p></span>
+          <span onClick={() => toggleBarbell(!isBarbellOpen)} className={isBarbellOpen ? "strive-red" : undefined}><FaDumbbell /><p> Barbell Club</p></span>
             <Collapse isOpened={isBarbellOpen}>
               <table className="schedule--crossfit__table">
                 <tbody>
@@ -279,8 +353,8 @@ const IndexPage = () => {
           <Img fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>
         </div>
         <div className="bottomPhotos right">
-          <Img fluid={data.kids.childImageSharp.fluid} alt="Kids exercising in fitness class"/>
-          <Img fluid={data.laughing.childImageSharp.fluid} alt="Women laughing on rowing machines"/>  
+          <Img fluid={data.humble.childImageSharp.fluid} alt="Team Hubmle Hustle posing for a picture"/>
+          <Img fluid={data.rolling.childImageSharp.fluid} alt="Athletes using foam rollers"/>  
           <Img fluid={data.pushpress.childImageSharp.fluid} alt="Woman lifting a barbell overhead"/>  
         </div>
         <form name='strive-contact' data-netlify='true' netlify-honeypot='bot-field' hidden>
@@ -295,7 +369,17 @@ const IndexPage = () => {
         </form>
 
       </div>
-    </Layout>
+      <footer className="footer">
+        <div className="footer__links">
+          <a href="https://facebook.com/crossfitstrivebastrop" target="_blank" rel="noreferrer noopener"><FaFacebookSquare /></a>
+          <a href="https://instagram.com/crossfitstrivebastrop" target="_blank" rel="noreferrer noopener"><FaInstagram /></a>
+          <a href="mailto:info@crossfitstrive.com" target="_blank" rel="noreferrer noopener"><FaEnvelope /></a>
+          <a href="tel:+1-512-555-9876"><FaPhone /></a>
+          <a href="https://goo.gl/maps/B362Ye6MUBcPYLvy8" target="_blank" rel="noreferrer noopener"><FaMapMarkerAlt /></a>
+        </div>
+        © {new Date().getFullYear()} CrossFit Strive Bastrop
+      </footer>
+    </div>
   )
 }
 

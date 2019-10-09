@@ -99,10 +99,15 @@
 
   @include md {
     margin: 1rem 0 10px 10px;
-    background-color: lighten($color: $black, $amount: 5);
-    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+    padding: 3rem 1rem;
+    // -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
+    // clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
     border-radius: 5px;
+    border-left: 8px solid $strive-red;
+    border-right: 8px solid $strive-red;
+    background-color: white;
+    color: $black;
+    box-shadow: 5px 5px 15px $black;
   }
 
   h2 {
@@ -148,16 +153,27 @@
 
   @include md {
     margin: 1rem 10px 10px 0;
-    background-color: lighten($color: $black, $amount: 10);
-    -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    padding: 3rem 1rem;
+    // -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    // clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     border-radius: 5px;
+    background-color: darken($strive-blue, 25);
+    border-left: 8px solid $strive-red;
+    border-right: 8px solid $strive-red;
+    background-color: white;
+    color: $black;
+    box-shadow: 5px 5px 15px $black;
   }
 
   h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+}
+
+.gatsby-image-wrapper {
+  box-shadow: 2px 5px 10px $black;
+  filter: drop-shadow(16px 10px 20px $black);
 }
 
 .bottomPhotos {

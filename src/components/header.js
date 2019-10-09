@@ -25,11 +25,6 @@ const Header = (props) => {
     }
   }, [])
 
-  const scrollToForm = () => {
-    animateScrollTo(document.querySelector('.joinUs'))
-    showForm(true)
-  }
-
   return (
     <>
     <header id="navbar" className={isMenuOpen ? "navbar__opacity" : "navbar"}>
@@ -66,7 +61,7 @@ const Header = (props) => {
             <Link className="link" to="/classes">Classes</Link>
             <Link className="link" to="/about">About</Link>
             <Link className="link" to="/reviews">Reviews</Link>
-            <button onClick={props.scroll} className="btn btn--primary">Sign Me Up</button>
+            <button className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>
 
