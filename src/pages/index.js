@@ -46,7 +46,7 @@ const IndexPage = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...this.state
+        ...values
       })
     }).then(() => {
       setThankYou('Thanks for getting in touch! We\'ll reach out shortly to talk about how we can help you start crushing goals.')
