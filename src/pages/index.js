@@ -27,6 +27,12 @@ const IndexPage = () => {
     reason: ''
   })
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   const handleInputChange = e => {
     const { name, value } = e.target
     setValues({...values, [name]: value})
@@ -34,7 +40,18 @@ const IndexPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    setThankYou('Thanks for getting in touch! We\'ll reach out shortly to talk about how we can help you start crushing goals.')
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    }).then(() => {
+      setThankYou('Thanks for getting in touch! We\'ll reach out shortly to talk about how we can help you start crushing goals.')
+    })
+    .catch(error => console.log(error))
   }
 
   const chooseTwoweeks = e => {
