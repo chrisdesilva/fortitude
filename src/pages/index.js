@@ -249,8 +249,8 @@ const IndexPage = () => {
 
                   <div className="form__buttons">
                     <span>I want...</span>
-                    <button onClick={chooseTwoweeks} value="Two free weeks" name="free" className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
-                    <button onClick={chooseMoreInfo} value="More info" name="info" className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
+                    <button onClick={chooseTwoweeks} value="Two free weeks" name="reason" className={twoWeeks ? "btn btn--form selected" : "btn btn--form"}>Two Free Weeks</button>
+                    <button onClick={chooseMoreInfo} value="More info" name="reason" className={moreInfo ? "btn btn--form selected" : "btn btn--form"}>More Information</button>
                   </div>
 
                   <button type="submit" className="btn btn--primary">Sign me up</button>
@@ -378,8 +378,8 @@ const IndexPage = () => {
           <input type='text' name='name' />
           <input type='email' name='email' />
           <input type='tel' name='phone' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-          <input type='button' name='free' />
-          <input type='button' name='info' />
+          <input type='button' name='reason' />
+          <input type='button' name='reason' />
           <input type='text' name='otherDescription' />
           <textarea name='comments' />
         </form>
