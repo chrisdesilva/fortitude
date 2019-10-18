@@ -5,7 +5,7 @@ import { Collapse } from 'react-collapse'
 import logo from "../images/strive_logo.png"
 import animateScrollTo from 'animated-scroll-to'
 
-const Header = (props) => {
+const Header = props => {
 
   const [isMenuOpen, toggleMenu] = useState(false)
   const [navBackground, setNavBackground] = useState(false)
@@ -61,7 +61,7 @@ const Header = (props) => {
             <Link className="link" to="/classes">Classes</Link>
             <Link className="link" to="/about">About</Link>
             <Link className="link" to="/reviews">Reviews</Link>
-            <button className="btn btn--primary">Sign Me Up</button>
+            <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>
 

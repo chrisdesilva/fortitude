@@ -9,7 +9,7 @@ const Classes = () => {
       <SEO title="Classes" />
       <div className="container--classes">
         <div className="leadContent--classes">
-          <h1>Classes</h1>
+          <h1>CLASSES</h1>
         </div>
       </div>
     </Layout>
