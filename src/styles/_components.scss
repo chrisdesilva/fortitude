@@ -159,12 +159,16 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0 0 0;
+    padding: 2rem 0;
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
 
     a {
       margin-bottom: 1rem;
+    }
+
+    span {
+      margin: .75rem 0;
       color: $black;
       text-transform: uppercase;
     }
@@ -234,8 +238,9 @@ a {
   &.showNav {
    background-color: white;  
    
-   a {
+   span {
     color: $strive-red;
+    cursor: pointer;
    }
    img {
      width: 8rem;
@@ -266,10 +271,11 @@ a {
     font-family: 'Anton', sans-serif;
     letter-spacing: 2px;
 
-    a {
+    span {
       margin-right: 2rem;
       text-transform: uppercase;
       color: white;
+      cursor: pointer;
     }
 
     // underline hover effect on nav links

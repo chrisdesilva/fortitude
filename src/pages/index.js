@@ -21,6 +21,10 @@ const IndexPage = () => {
     showForm(true)
   }
 
+  const scrollToClasses = () => {
+    animateScrollTo(document.querySelector('.classes'))
+  }
+
   const [navBackground, setNavBackground] = useState(false)
   const navRef = useRef()
   
@@ -121,15 +125,17 @@ const IndexPage = () => {
           form={form}
           showForm={() => showForm(true)}
         />
-        <Schedule />
+        <Schedule 
+          scroll={scrollToClasses}
+        />
         <Pricing />
         <Classes 
           onClick={scrollToForm}
+          fluid={data.kbswings.childImageSharp.fluid}
         />
 
         <div className="bottomPhotos left">
           <Img fluid={data.rowing.childImageSharp.fluid} alt="Athletes exercising on rowing machines"/>
-          <Img fluid={data.kbswings.childImageSharp.fluid} alt="Athletes performing single arm kettlebell swings"/>
         </div>
         <div className="bottomPhotos middle">
           <Img fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>

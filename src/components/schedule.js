@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaDumbbell, FaFire, FaHeartbeat } from 'react-icons/fa'
 import { Collapse } from 'react-collapse'
 
-const Schedule = () => {
+const Schedule = props => {
 
   const [isCrossfitOpen, toggleCrossfit] = useState(false)
   const [isPumpBurnOpen, togglePumpBurn] = useState(false)
@@ -86,7 +86,8 @@ const Schedule = () => {
               </tr>
             </tbody>
           </table>
-        </Collapse>  
+        </Collapse>
+        <p>For class descriptions, click <span className="schedule__link" onClick={props.scroll}>here</span>.</p>  
     </div>
   )
 }

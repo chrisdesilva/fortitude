@@ -10,6 +10,11 @@ const Header = props => {
   const [isMenuOpen, toggleMenu] = useState(false)
   const [navBackground, setNavBackground] = useState(false)
   const navRef = useRef()
+
+  const toClasses = () => {
+    animateScrollTo(document.querySelector('.classes'))
+    toggleMenu(false)
+  }
   
   navRef.current = navBackground
   useEffect(() => {
@@ -40,10 +45,10 @@ const Header = props => {
         <Collapse isOpened={isMenuOpen}>
           <div id="navbar__links">
             <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
-            <Link to="/classes">Classes</Link>
-            <Link to="/about">About</Link>
-            <Link to="/reviews">Reviews</Link>
-            <a className="btn btn--primary" href="https://crossfitstrivebastrop.wodify.com/OnlineSalesPortal/ViewSchedule.aspx?LocationId=4207&IsMobile=False&OnlineMembershipId=48149" target="_blank" rel="noreferrer noopener">Sign Me Up</a>
+            <span onClick={toClasses}>Classes</span>
+            <span to="/about">About</span>
+            <span to="/reviews">Reviews</span>
+            <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
           </div>
         </Collapse>
       </div>
@@ -58,9 +63,9 @@ const Header = props => {
 
       <div id="navbar--md-open">
           <div id="navbar--md__links">
-            <Link className="link" to="/classes">Classes</Link>
-            <Link className="link" to="/about">About</Link>
-            <Link className="link" to="/reviews">Reviews</Link>
+            <span className="link" onClick={toClasses}>Classes</span>
+            <span className="link" to="/about">About</span>
+            <span className="link" to="/reviews">Reviews</span>
             <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>
