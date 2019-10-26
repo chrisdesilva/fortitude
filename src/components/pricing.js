@@ -3,7 +3,7 @@ import React from 'react'
 const Pricing = () => {
 
   return (
-    <div className="pricing">
+    <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease-in-out" className="pricing">
       <h2>Pricing</h2>
       <p>Drop-In: $20/class</p>
       <p>2x/week: $100/mo</p>

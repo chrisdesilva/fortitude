@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Classes from "../components/classes"
 import Header from "../components/header"
@@ -8,6 +8,7 @@ import LeadContent from "../components/leadContent"
 import Pricing from "../components/pricing"
 import Schedule from "../components/schedule"
 import SEO from "../components/seo"
+import Coaches from "../components/coaches"
 import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import animateScrollTo from 'animated-scroll-to'
 import "../styles/main.scss"
@@ -107,6 +108,34 @@ const IndexPage = () => {
           }
         }
       }
+      athan: file(relativePath: { eq: "coach_athan.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      kady: file(relativePath: { eq: "coach_kady.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      lexi: file(relativePath: { eq: "coach_lexi.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cody: file(relativePath: { eq: "coach_cody.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -133,17 +162,31 @@ const IndexPage = () => {
           onClick={scrollToForm}
           fluid={data.kbswings.childImageSharp.fluid}
         />
+        <Coaches 
+          athan={data.athan.childImageSharp.fluid}
+          cody={data.cody.childImageSharp.fluid}
+          kady={data.kady.childImageSharp.fluid}
+          lexi={data.lexi.childImageSharp.fluid}
+        />
 
         <div className="bottomPhotos left">
-          <Img fluid={data.rowing.childImageSharp.fluid} alt="Athletes exercising on rowing machines"/>
+          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.rowing.childImageSharp.fluid} alt="Athletes exercising on rowing machines"/></div>
+          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.humble.childImageSharp.fluid} alt="Team Hubmle Hustle posing for a picture"/></div>
         </div>
         <div className="bottomPhotos middle">
-          <Img fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>
+          <Img className="middleImage" fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>
+          <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease-in-out" className="values">
+            <h3>OUR VALUES</h3>
+            <p>FAIL OFTEN</p>  
+            <p>DO THE WORK</p>  
+            <p>OWN YOUR LIFE</p>  
+            <p>PRIORITIZE WHAT MATTERS</p>  
+            <p>KINDNESS OVER EVERYTHING</p>  
+          </div>
         </div>
         <div className="bottomPhotos right">
-          <Img fluid={data.humble.childImageSharp.fluid} alt="Team Hubmle Hustle posing for a picture"/>
-          <Img fluid={data.rolling.childImageSharp.fluid} alt="Athletes using foam rollers"/>  
-          <Img fluid={data.pushpress.childImageSharp.fluid} alt="Woman lifting a barbell overhead"/>  
+          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.rolling.childImageSharp.fluid} alt="Athletes using foam rollers"/></div>  
+          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.pushpress.childImageSharp.fluid} alt="Woman lifting a barbell overhead"/></div>  
         </div>
         <form name='strive-contact' data-netlify='true' netlify-honeypot='bot-field' hidden>
           <input type='text' name='name' />

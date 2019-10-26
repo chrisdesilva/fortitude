@@ -1,5 +1,5 @@
 .container {
-  @include md {
+  @include lg {
     display: grid;
     grid-template-columns: .4fr 1.2fr .4fr;
     grid-template-rows: .75fr 1fr 200px .5fr;
@@ -8,6 +8,7 @@
     "schedule joinUs pricing"
     "schedule joinUs pricing"
     "classes classes classes"
+    "coaches coaches coaches"
     "left     middle   right"
   }
 }
@@ -33,7 +34,7 @@
   padding: 12rem 1rem;
   grid-area: leadContent;
 
-  @include md {
+  @include lg {
     background-image: url("../images/listening_to_coach_athan.jpg");
   }
 
@@ -44,7 +45,7 @@
   &__span {
     display: block;
 
-    @include md {
+    @include lg {
       display: inline;
     }
 
@@ -59,7 +60,7 @@
   padding: 2rem 3rem;
   grid-area: joinUs;
 
-  @include md {
+  @include lg {
     padding: 6rem 3rem;
   }
 
@@ -102,7 +103,7 @@
   color: white;
   grid-area: schedule;
 
-  @include md {
+  @include lg {
     margin: 1rem 0 10px 10px;
     padding: 3rem 1rem;
     // -webkit-clip-path: polygon(0 0, 100% 2%, 100% 100%, 0% 100%);
@@ -128,6 +129,7 @@
   h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-top: 2rem;
   }
 
   span:not(.schedule__link) {
@@ -166,7 +168,7 @@
   color: white;
   margin: 10px 0;
 
-  @include md {
+  @include lg {
     margin: 1rem 10px 10px 0;
     padding: 3rem 1rem;
     // -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
@@ -183,6 +185,7 @@
   h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-top: 2rem;
   }
 }
 
@@ -201,7 +204,7 @@
   display: flex;
   flex-direction: column;
 
-  @include md {
+  @include lg {
     grid-area: classes;
     margin-top: 2rem;
   }
@@ -215,7 +218,7 @@
     display: grid;
     grid-template-rows: 3fr 1fr;
 
-    @include md {
+    @include lg {
       margin: 0 2rem;
     }
 
@@ -225,7 +228,7 @@
   }
 
   &__content {
-    @include md {
+    @include lg {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
@@ -233,16 +236,6 @@
 
       .gatsby-image-wrapper {
        display: none;
-      }
-
-      &--5 {
-        display: none;
-
-        @include md {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
       }
     }
   }
@@ -263,6 +256,61 @@
   }
 }
 
+.coaches {
+  display: flex;
+  flex-direction: column;
+  grid-area: coaches;
+  padding-top: 5rem;
+
+  h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__bio {
+    padding: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+     p {
+       font-size: 1.25rem;
+     }
+
+     @include lg {
+       margin: 2rem;
+     }
+  }
+
+  &__photo {
+    width: 100%;
+
+    @include lg {
+      width: 20%;
+      padding: 1rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    &:nth-of-type(2n) {
+      background: lighten($strive-blue, 45);
+    }
+
+    @include lg {
+      flex-direction: row;
+      padding: 3rem 10rem;
+
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
 .bottomPhotos {
   background-color: lighten($color: $black, $amount: 5);
   padding: 1rem;
@@ -271,7 +319,7 @@
     border-radius: 5px;
   }
 
-  @include md {
+  @include lg {
     background-color: darken($strive-blue, 25);
   }
 }
@@ -279,7 +327,7 @@
 .left {
   display: none;
 
-  @include md {
+  @include lg {
     grid-area: left;
     display: flex;
     flex-direction: column;
@@ -288,19 +336,49 @@
 }
 
 .middle {
-  @include md {
+  position: relative;
+  @include lg {
     grid-area: middle;
+  }
+
+  .values {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: .75rem;
+    color: $black;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 2rem 0;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
   }
 }
 
 .right {
   display: none;
 
-  @include md{
+  @include lg{
     grid-area: right;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 

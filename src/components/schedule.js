@@ -9,7 +9,7 @@ const Schedule = props => {
   const [isBarbellOpen, toggleBarbell] = useState(false)
 
   return (
-    <div className="schedule">
+    <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease-in-out" className="schedule">
       <h2>Schedule</h2>
       <p>Click a class below to check the schedule</p>
       <span onClick={() => toggleCrossfit(!isCrossfitOpen)} className={isCrossfitOpen ? "strive-red" : undefined}><FaHeartbeat/><p>CrossFit</p></span>

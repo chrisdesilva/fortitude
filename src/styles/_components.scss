@@ -110,7 +110,7 @@ a {
     "...... ...... closed"
     "......  open  ......";
 
-    @include md {
+    @include lg {
       display: none;
     }
 
@@ -128,7 +128,7 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    @include md {
+    @include lg {
       display: none;
     }
   }
@@ -139,7 +139,7 @@ a {
     align-items: flex-start;
     justify-content: center;
 
-    @include md {
+    @include lg {
       display: none;
     }
   }
@@ -224,7 +224,7 @@ a {
 #navbar--md {
   display: none;
 
-  @include md {
+  @include lg {
     display: flex;
     position: fixed;
     width: 100vw;
