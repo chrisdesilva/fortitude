@@ -2,7 +2,7 @@
   @include lg {
     display: grid;
     grid-template-columns: .4fr 1.2fr .4fr;
-    grid-template-rows: .75fr 1fr 200px .5fr;
+    grid-template-rows: .5fr 1fr 200px .5fr;
     grid-template-areas:
     "leadContent leadContent leadContent"
     "schedule joinUs pricing"
@@ -24,29 +24,32 @@
 .leadContent {
   text-align: center;
   color: #f7f7f7;
-  background-image: url("../images/listening_to_coach_athan_sm.jpg");
+  background-image: url("../images/fist_bump_sm.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 12rem 1rem;
+  padding: 12rem 0;
   grid-area: leadContent;
 
   @include lg {
-    background-image: url("../images/listening_to_coach_athan.jpg");
+    background-image: url("../images/fist_bump.jpg");
   }
 
   h1 {
     letter-spacing: 2px;
+    width: 100%;
   }
 
   &__span {
     display: block;
+    background: rgba(0, 0, 0, 0.5);
 
     @include lg {
       display: inline;
+      background: none;
     }
 
   }
@@ -54,7 +57,6 @@
 
 .joinUs {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   padding: 2rem 3rem;
@@ -189,11 +191,6 @@
   }
 }
 
-.gatsby-image-wrapper {
-  box-shadow: 2px 5px 10px $black;
-  filter: drop-shadow(16px 10px 20px $black);
-}
-
 #classBtn {
   margin-top: 3rem;
 }
@@ -286,7 +283,7 @@
     width: 100%;
 
     @include lg {
-      width: 20%;
+      width: 25%;
       padding: 1rem;
     }
   }
@@ -351,9 +348,12 @@
     font-weight: bold;
     line-height: .75rem;
     color: $black;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
     width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     h3 {
       font-size: 2rem;

@@ -11,23 +11,13 @@ const Header = props => {
   const [navBackground, setNavBackground] = useState(false)
   const navRef = useRef()
 
-  const toClasses = () => {
-    animateScrollTo(document.querySelector('.classes'))
+  const toSection = className => {
+    animateScrollTo(document.querySelector(className))
     toggleMenu(false)
   }
 
-  const toPricing = () => {
-    animateScrollTo(document.querySelector('.pricing'))
-    toggleMenu(false)
-  }
-
-  const toSchedule = () => {
-    animateScrollTo(document.querySelector('.schedule'))
-    toggleMenu(false)
-  }
-
-  const toCoaches = () => {
-    animateScrollTo(document.querySelector('.coaches'))
+  const signUp = () => {
+    props.onClick()
     toggleMenu(false)
   }
   
@@ -60,11 +50,11 @@ const Header = props => {
         <Collapse isOpened={isMenuOpen}>
           <div id="navbar__links">
             <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
-            <span onClick={toSchedule}>Schedule</span> 
-            <span onClick={toPricing}>Pricing</span>
-            <span onClick={toClasses}>Classes</span>
-            <span onClick={toCoaches}>Coaches</span>
-            <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
+            <span onClick={() => toSection('.schedule')}>Schedule</span> 
+            <span onClick={() => toSection('.pricing')}>Pricing</span>
+            <span onClick={() => toSection('.classes')}>Classes</span>
+            <span onClick={() => toSection('.coaches')}>Coaches</span>
+            <button onClick={signUp} className="btn btn--primary">Sign Me Up</button>
           </div>
         </Collapse>
       </div>
@@ -79,10 +69,10 @@ const Header = props => {
 
       <div id="navbar--md-open">
           <div id="navbar--md__links">
-            <span className="link" onClick={toSchedule}>Schedule</span>            
-            <span className="link" onClick={toPricing}>Pricing</span>
-            <span className="link" onClick={toClasses}>Classes</span>
-            <span className="link" onClick={toCoaches}>Coaches</span>
+            <span className="link" onClick={() => toSection('.schedule')}>Schedule</span>            
+            <span className="link" onClick={() => toSection('.pricing')}>Pricing</span>
+            <span className="link" onClick={() => toSection('.classes')}>Classes</span>
+            <span className="link" onClick={() => toSection('.coaches')}>Coaches</span>
             <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>
