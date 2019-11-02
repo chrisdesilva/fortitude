@@ -46,7 +46,7 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      squat: file(relativePath: { eq: "barbell_on_back.png" }) {
+      squat: file(relativePath: { eq: "barbell_on_back.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
