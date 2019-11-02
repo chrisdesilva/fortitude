@@ -54,6 +54,7 @@ const Header = props => {
             <span onClick={() => toSection('.pricing')}>Pricing</span>
             <span onClick={() => toSection('.classes')}>Classes</span>
             <span onClick={() => toSection('.coaches')}>Coaches</span>
+            <span onClick={() => toSection('.reviews')}>Reviews</span>
             <button onClick={signUp} className="btn btn--primary">Sign Me Up</button>
           </div>
         </Collapse>
@@ -73,6 +74,7 @@ const Header = props => {
             <span className="link" onClick={() => toSection('.pricing')}>Pricing</span>
             <span className="link" onClick={() => toSection('.classes')}>Classes</span>
             <span className="link" onClick={() => toSection('.coaches')}>Coaches</span>
+            <span className="link" onClick={() => toSection('.reviews')}>Reviews</span>
             <button onClick={props.onClick} className="btn btn--primary">Sign Me Up</button>
           </div>
       </div>

@@ -12,6 +12,7 @@ import Coaches from "../components/coaches"
 import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import animateScrollTo from 'animated-scroll-to'
 import "../styles/main.scss"
+import Reviews from "../components/reviews"
 
 const IndexPage = () => {
 
@@ -45,7 +46,7 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      pushups: file(relativePath: { eq: "pushups_bumpers.jpg" }) {
+      squat: file(relativePath: { eq: "barbell_on_back.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -59,7 +60,7 @@ const IndexPage = () => {
           }
         }
       }
-      rowing: file(relativePath: { eq: "rowing.jpg" }) {
+      pullups: file(relativePath: { eq: "pullups.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -87,7 +88,7 @@ const IndexPage = () => {
           }
         }
       }
-      pushpress: file(relativePath: { eq: "push_press.jpg" }) {
+      postworkout: file(relativePath: { eq: "pound.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -108,7 +109,7 @@ const IndexPage = () => {
           }
         }
       }
-      rolling: file(relativePath: { eq: "rolling_out.jpg" }) {
+      boxjumps: file(relativePath: { eq: "box_jumps.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -143,6 +144,20 @@ const IndexPage = () => {
           }
         }
       }
+      best2018: file(relativePath: { eq: "2018-Best-of-Bastrop.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      best2019: file(relativePath: { eq: "2019-Best-of-Bastrop.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -157,7 +172,7 @@ const IndexPage = () => {
           onClick={scrollToForm}
         />
         <JoinUs 
-          fluid={data.pushups.childImageSharp.fluid}
+          fluid={data.squat.childImageSharp.fluid}
           form={form}
           showForm={() => showForm(true)}
         />
@@ -175,10 +190,13 @@ const IndexPage = () => {
           kady={data.kady.childImageSharp.fluid}
           lexi={data.lexi.childImageSharp.fluid}
         />
-
+        <Reviews 
+          best2018={data.best2018.childImageSharp.fluid}
+          best2019={data.best2019.childImageSharp.fluid}
+        />
         <div className="bottomPhotos left">
-          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.rowing.childImageSharp.fluid} alt="Athletes exercising on rowing machines"/></div>
-          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.humble.childImageSharp.fluid} alt="Team Hubmle Hustle posing for a picture"/></div>
+          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.pullups.childImageSharp.fluid} alt="Athlete performing pullups"/></div>
+          <div data-sal="slide-right" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.postworkout.childImageSharp.fluid} alt="Coach giving athlete a fist bump after workout"/></div>  
         </div>
         <div className="bottomPhotos middle">
           <Img className="middleImage" fluid={data.fullGym.childImageSharp.fluid} alt="CrossFit gym setting up full of athletes"/>
@@ -192,8 +210,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="bottomPhotos right">
-          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.rolling.childImageSharp.fluid} alt="Athletes using foam rollers"/></div>  
-          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.pushpress.childImageSharp.fluid} alt="Woman lifting a barbell overhead"/></div>  
+          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease"><Img fluid={data.boxjumps.childImageSharp.fluid} alt="Athlete jumping onto plyo box"/></div>
+          <div data-sal="slide-left" data-sal-duration="1000" data-sal-easing="ease-in-out"><Img fluid={data.humble.childImageSharp.fluid} alt="Team Hubmle Hustle posing for a picture"/></div>  
         </div>
         <form name='strive-contact' data-netlify='true' netlify-honeypot='bot-field' hidden>
           <input type='text' name='name' />

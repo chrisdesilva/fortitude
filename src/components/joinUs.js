@@ -72,7 +72,7 @@ const JoinUs = props => {
         </React.Fragment>
       }
 
-      {!props.form && <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={props.fluid} /></div>}
+      {!props.form && <div style={{width: `100%`, margin: `1.45rem 0`, padding: `0 1rem`}}><Img fluid={props.fluid} alt="Athlete with barbell on her shoulders"/></div>}
 
       <Collapse isOpened={props.form}>
         <form name="strive-contact" className="form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
