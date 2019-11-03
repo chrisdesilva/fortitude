@@ -349,7 +349,11 @@
     align-items: center;
 
     @include lg {
-      grid-template-columns: 1fr 1fr 1fr
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include xl {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
@@ -360,6 +364,10 @@
       display: block;
     }
   }
+}
+
+._3x-2 {
+  display: none;
 }
 
 .bottomPhotos {
