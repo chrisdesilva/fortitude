@@ -291,7 +291,7 @@
   &__row {
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
+    padding: 2rem;
 
     &:nth-of-type(2n) {
       background: lighten($black, 80);
@@ -345,8 +345,8 @@
   &__cards {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
+    align-items: flex-start;
+    color: $black;
 
     @include lg {
       grid-template-columns: 1fr 1fr;
@@ -357,17 +357,21 @@
     }
   }
 
-  &__iframe {
-    display: none;
+  &__card {
+    padding: 2rem;
 
-    @include md {
-      display: block;
+    h3 {
+      font-weight: normal;
     }
   }
-}
 
-._3x-2 {
-  display: none;
+  // &__iframe {
+  //   display: none;
+
+  //   @include md {
+  //     display: block;
+  //   }
+  // }
 }
 
 .bottomPhotos {
