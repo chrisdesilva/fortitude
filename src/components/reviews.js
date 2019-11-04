@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Img from 'gatsby-image'
+import { FaStar } from 'react-icons/fa'
 
 const Reviews = props => {
 
@@ -24,9 +25,10 @@ const Reviews = props => {
     <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease-in-out" className="reviews__cards">
       {reviews.map((review, i) => {
         let fullName = review.author_name.split(' ')
-        return <div className="reviews__card">
+        return <div key={review.author_name} className="reviews__card">
+          {reviews.map(rating => <span><FaStar /></span>)}
           <p>{review.text}</p>
-          <h3>-{fullName[0]}  </h3>
+          <h3>-{fullName[0]}</h3>
         </div>
       })}
     </div>

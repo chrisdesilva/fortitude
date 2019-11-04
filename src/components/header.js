@@ -62,7 +62,7 @@ const Header = props => {
 
     </header>
 
-    <header className={navBackground && "showNav"} id="navbar--md">
+    <header className={navBackground ? "showNav" : null} id="navbar--md">
       
       <div id="navbar--md__logo">
         <Link to="/"><img src={logo} alt="CrossFit Strive logo" /></Link>
