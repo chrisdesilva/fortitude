@@ -349,11 +349,30 @@
     color: $black;
 
     @include lg {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include xl {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: 
+        "zero zero one one two two"
+        ". three three four four ."
+      ;
+      .card0 {
+        grid-area: zero;
+      }
+  
+      .card1 {
+        grid-area: one;
+      }
+  
+      .card2 {
+        grid-area: two;
+      }
+  
+      .card3 {
+        grid-area: three;
+      }
+  
+      .card4 {
+        grid-area: four;
+      }
     }
   }
 
