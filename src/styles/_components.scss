@@ -8,8 +8,10 @@ a {
   display: flex;
   flex-direction: column;
   border-top: 10px solid $black;
+  border-bottom: 2px solid lighten($black, 60);
+  border-left: 2px solid lighten($black, 60);
+  border-right: 2px solid lighten($black, 60);
   padding: 2rem 4rem 2rem 4rem;
-  box-shadow: 0 25px 50px 12px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin: 0;
 
