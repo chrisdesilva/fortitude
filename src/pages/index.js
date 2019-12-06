@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Classes from "../components/classes"
 import Header from "../components/header"
@@ -9,7 +9,7 @@ import Pricing from "../components/pricing"
 import Schedule from "../components/schedule"
 import SEO from "../components/seo"
 import Coaches from "../components/coaches"
-import { FaEnvelope, FaFacebookSquare, FaInstagram, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
+import { FaEnvelope, FaFacebookSquare, FaInstagram } from 'react-icons/fa'
 import animateScrollTo from 'animated-scroll-to'
 import "../styles/main.scss"
 import Reviews from "../components/reviews"
@@ -222,6 +222,17 @@ const IndexPage = () => {
           <input type='text' name='otherDescription' />
           <textarea name='comments' />
         </form>
+        <form name='strive-hold' data-netlify='true' netlify-honeypot='bot-field' hidden>
+          <input type='text' name='name' />
+          <input type='email' name='email' />
+          <input type='text' name='date' />
+          <input type='textarea' name='reason' />
+        </form>
+        <form name='strive-cancel' data-netlify='true' netlify-honeypot='bot-field' hidden>
+          <input type='text' name='name' />
+          <input type='email' name='email' />
+          <textarea name='comments' />
+        </form>
 
       </div>
       <footer className="footer">
@@ -229,8 +240,13 @@ const IndexPage = () => {
           <a href="https://facebook.com/crossfitstrivebastrop" target="_blank" rel="noreferrer noopener"><FaFacebookSquare /></a>
           <a href="https://instagram.com/crossfitstrivebastrop" target="_blank" rel="noreferrer noopener"><FaInstagram /></a>
           <a href="mailto:info@crossfitstrive.com" target="_blank" rel="noreferrer noopener"><FaEnvelope /></a>
-          <a href="tel:+1-512-555-9876"><FaPhone /></a>
-          <a href="https://goo.gl/maps/B362Ye6MUBcPYLvy8" target="_blank" rel="noreferrer noopener"><FaMapMarkerAlt /></a>
+        </div>
+        <div className="footer__contact">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13805.434488145698!2d-97.346715!3d30.11255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x770de78066f1da5e!2sCrossFit%20Strive%20Bastrop!5e0!3m2!1sen!2sus!4v1575587420411!5m2!1sen!2sus" maxwidth="600" maxheight="450" frameBorder="0" style={{border:0}} allowFullScreen=""></iframe>  
+          <a href="tel:+1-512-555-9876">512-555-9876</a>
+          <a href="https://goo.gl/maps/B362Ye6MUBcPYLvy8" target="_blank" rel="noreferrer noopener"><p>623 Highway 71 West, Suite 108</p><p>Bastrop, TX 78602</p></a>
+          <Link className="membership" to="/membershiphold">Membership Hold</Link>
+          <Link className="membership" to="/membershipcancellation">Membership Cancellation</Link>
         </div>
         © {new Date().getFullYear()} CrossFit Strive Bastrop
       </footer>

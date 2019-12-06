@@ -16,12 +16,8 @@ const Classes = props => {
         </div>
         <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease-in-out" className="classes__class">
           <div className="classes__content--2">
-            <h3>Pump 30/Burn 30</h3>
-            <p>Our Pump & Burn classes are a great alternative or supplement to CrossFit.  Each is a 30-minute class, scheduled back-to-back so that you can come to one or both.<br/><br/> 
-
-            <strong>PUMP 30</strong> is a total body workout that builds solid, lean muscle. An expert trainer will guide you through movements that utilize dumbbells, kettlebells, and your own bodyweight.<br/><br/> 
-            
-            <strong>BURN 30</strong> is a high-energy cardio workout that will get your heart rate up and keep it there.</p>
+            <h3>Pump & Burn</h3>
+            <p>Our Pump & Burn classes are a great alternative or supplement to CrossFit. It's a one-hour class of equal amounts of strength training (Pump) and conditioning (Burn). PUMP is a total body workout that builds solid, lean muscle. An expert trainer will guide you through movements that utilize dumbbells, kettlebells, and your own bodyweight. BURN is a high-energy cardio workout that will get your heart rate up and keep it there.</p>
           </div>
           <div className="classes__icon"><FaFire /></div>
         </div>
