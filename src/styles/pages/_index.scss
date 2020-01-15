@@ -1,15 +1,15 @@
 .container {
   @include lg {
     display: grid;
-    grid-template-columns: .4fr 1.2fr .4fr;
+    grid-template-columns: 0.4fr 1.2fr 0.4fr;
     grid-template-areas:
-    "leadContent leadContent leadContent"
-    "schedule joinUs pricing"
-    "schedule joinUs pricing"
-    "classes classes classes"
-    "coaches coaches coaches"
-    "reviews reviews reviews"
-    "left     middle   right"
+      "leadContent leadContent leadContent"
+      "schedule joinUs pricing"
+      "schedule joinUs pricing"
+      "classes classes classes"
+      "coaches coaches coaches"
+      "reviews reviews reviews"
+      "left     middle   right";
   }
 }
 
@@ -51,7 +51,6 @@
       display: inline;
       background: none;
     }
-
   }
 }
 
@@ -69,7 +68,7 @@
   h2 {
     text-align: center;
     text-transform: uppercase;
-    margin: 1rem 0 .5rem 0;
+    margin: 1rem 0 0.5rem 0;
     font-size: 2rem;
   }
 
@@ -79,7 +78,7 @@
 
   &__span {
     display: block;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     font-family: $font-header;
     font-size: 1.25rem;
   }
@@ -89,7 +88,7 @@
   }
 
   &__check {
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: $strive-red;
   }
 
@@ -166,11 +165,11 @@
   }
 
   table {
-
     margin: 0;
 
     tr {
-      td, th {
+      td,
+      th {
         text-align: center;
       }
     }
@@ -192,11 +191,12 @@
     color: white;
 
     @include lg {
-      color: $black
+      color: $black;
     }
   }
 
-  td, th {
+  td,
+  th {
     text-align: center;
   }
 
@@ -258,7 +258,7 @@
     border-radius: 5px;
     box-shadow: 2px 5px 10px lighten($black, 60);
     padding: 3rem;
-    margin: 2rem .5rem;
+    margin: 2rem 0.5rem;
     display: grid;
     grid-template-rows: 3fr 1fr;
 
@@ -279,7 +279,7 @@
       grid-gap: 2rem;
 
       .gatsby-image-wrapper {
-       display: none;
+        display: none;
       }
     }
   }
@@ -317,13 +317,16 @@
     padding: 1rem;
     margin: 2rem 0;
     width: 100%;
-     p {
-       font-size: 1.25rem;
-     }
+    p:first-of-type {
+      font-size: 1.25rem;
+    }
+    p:last-of-type {
+      font-size: 0.75rem;
+    }
 
-     @include lg {
-       margin: 2rem;
-     }
+    @include lg {
+      margin: 2rem;
+    }
   }
 
   &__photo {
@@ -381,7 +384,7 @@
       width: 90%;
       display: flex;
       justify-content: center;
-      margin-bottom: .25rem;
+      margin-bottom: 0.25rem;
 
       @include lg {
         width: 50%;
@@ -397,26 +400,25 @@
 
     @include lg {
       grid-template-columns: repeat(6, 1fr);
-      grid-template-areas: 
+      grid-template-areas:
         "zero zero one one two two"
-        ". three three four four ."
-      ;
+        ". three three four four .";
       .card0 {
         grid-area: zero;
       }
-  
+
       .card1 {
         grid-area: one;
       }
-  
+
       .card2 {
         grid-area: two;
       }
-  
+
       .card3 {
         grid-area: three;
       }
-  
+
       .card4 {
         grid-area: four;
       }
@@ -487,7 +489,7 @@
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
-    line-height: .75rem;
+    line-height: 0.75rem;
     color: $black;
     background: rgba(255, 255, 255, 0.5);
     width: calc(100% - 2rem);
@@ -520,7 +522,7 @@
 .right {
   display: none;
 
-  @include lg{
+  @include lg {
     grid-area: right;
     display: flex;
     flex-direction: column;
@@ -587,7 +589,4 @@
       margin-top: 1rem;
     }
   }
-
-
 }
-
