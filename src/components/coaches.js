@@ -113,7 +113,14 @@ const Coaches = props => {
         </div>
         <div className="coaches__bio">
           <h3>Coach Jessica</h3>
-          <p></p>
+          <p>
+            Jessica is an enthusiastic coach who has a passion for health and
+            fitness. She was a competitive, multi-sport athlete growing up. She
+            found CrossFit in 2009 and knew it was a methodology she wanted to
+            be a part of. Since, she has been in many competitions, and attended
+            the CrossFit gymnastics and Mobility courses and has her CrossFit
+            Level 1.
+          </p>
           <p>
             Certifications: CF L1, CF Mobility Certificate, CF Gymnastics
             Certificate, Coached volleyball, basketball and track for 6 years
