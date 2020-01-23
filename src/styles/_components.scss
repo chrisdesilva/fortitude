@@ -16,7 +16,7 @@ a {
   margin: 0;
 
   &__buttons {
-    margin: .5rem 0 .5rem 0;
+    margin: 0.5rem 0 0.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,18 +28,18 @@ a {
   }
 
   input {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     max-width: 20rem;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 5px;
 
-    &:focus::-webkit-input-placeholder{
+    &:focus::-webkit-input-placeholder {
       color: transparent;
     }
   }
 
   button {
-    margin-top: 1rem; 
+    margin-top: 1rem;
   }
 
   p {
@@ -48,17 +48,17 @@ a {
 }
 
 .btn {
-  align-self:center;
-  background:transparent;
-  padding:.5rem .75rem;
-  margin:0 1rem;
-  transition:all .5s ease;
-  color:$x-light-red;
-  font-size:1rem;
-  letter-spacing:1px;
-  outline:none;
+  align-self: center;
+  background: transparent;
+  padding: 0.5rem 0.75rem;
+  margin: 0 1rem;
+  transition: all 0.5s ease;
+  color: $x-light-red;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  outline: none;
   box-shadow: 20px 38px 34px -26px rgba(24, 24, 24, 0.2);
-  border:solid 3px $x-light-red;
+  border: solid 3px $x-light-red;
   text-decoration: none;
   transition: all 300ms;
   text-transform: uppercase;
@@ -81,20 +81,19 @@ a {
 
   &:hover {
     cursor: pointer;
-    box-shadow:2px 8px 4px -6px rgba(26, 26, 26, 0.3);
+    box-shadow: 2px 8px 4px -6px rgba(26, 26, 26, 0.3);
     background: $strive-red;
     color: white;
   }
 
   &:active {
-    box-shadow:2px 4px 4px -6px rgba(26, 26, 26, 0.8);
+    box-shadow: 2px 4px 4px -6px rgba(26, 26, 26, 0.8);
   }
 }
 
 // mobile navbar with hamburger menu
 .navbar {
   background: transparent;
-  
 
   &__opacity {
     background: $x-light-red;
@@ -108,20 +107,20 @@ a {
   z-index: 100;
   grid-template-columns: 4rem 1fr 4rem;
   grid-template-rows: 4rem 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "...... ...... closed"
     "......  open  ......";
 
-    @include lg {
-      display: none;
-    }
+  @include lg {
+    display: none;
+  }
 
   .bar {
     display: block;
     width: 100%;
     height: 15%;
     margin-top: 10%;
-    transition: all .25s;
+    transition: all 0.25s;
   }
 
   &-closed {
@@ -162,7 +161,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
     letter-spacing: 2px;
 
     a {
@@ -170,18 +169,17 @@ a {
     }
 
     span {
-      margin: .75rem 0;
+      margin: 0.75rem 0;
       color: $black;
       text-transform: uppercase;
     }
-
   }
 
   &__hamburger {
     cursor: pointer;
-    
-    width:30px;
-    height:25px;
+
+    width: 30px;
+    height: 25px;
 
     display: flex;
     flex-direction: column;
@@ -193,22 +191,22 @@ a {
 // navbar hamburger animation
 .bar {
   display: block;
-  
-  width:100%;
-  
+
+  width: 100%;
+
   background: $black;
-  
-  transition:0.25s;
-  -webkit-transition:0.25s;
-  
--webkit-user-select: none;
-  -moz-user-select: none;    
-  -ms-user-select: none;      
-  user-select: none;          
+
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .animate .bar:nth-child(1) {
-  transform:translateY(8px) rotate(135deg);
+  transform: translateY(8px) rotate(135deg);
   background: $strive-red;
 }
 
@@ -217,10 +215,9 @@ a {
 }
 
 .animate .bar:nth-child(3) {
-  transform:translateY(-8px) rotate(-135deg);
+  transform: translateY(-8px) rotate(-135deg);
   background: $strive-red;
 }
-
 
 // navbar with visible links for tablets and up
 #navbar--md {
@@ -238,15 +235,15 @@ a {
   }
 
   &.showNav {
-   background-color: white;  
-   
-   span {
-    color: $strive-red;
-    cursor: pointer;
-   }
-   img {
-     width: 8rem;
-   }
+    background-color: white;
+
+    span {
+      color: $strive-red;
+      cursor: pointer;
+    }
+    img {
+      width: 8rem;
+    }
   }
 
   img {
@@ -254,7 +251,6 @@ a {
     margin: 1rem 1rem;
     transition: all 300ms;
   }
-
 
   &-open {
     margin-right: 1rem;
@@ -266,11 +262,10 @@ a {
     @include xl {
       margin-right: 5rem;
     }
-
   }
 
   &__links {
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
     letter-spacing: 2px;
 
     span {
@@ -297,7 +292,7 @@ a {
         right: 0;
         margin: auto;
         width: 0%;
-        content: '.';
+        content: ".";
         color: transparent;
         background: $strive-blue;
         height: 2px;
@@ -319,4 +314,3 @@ a {
     }
   }
 }
-

@@ -213,7 +213,7 @@ const IndexPage = () => {
         />
         <div className="bottomPhotos left">
           <div
-            data-sal="slide-right"
+            data-sal="fade"
             data-sal-duration="1000"
             data-sal-easing="ease-in-out"
           >
@@ -222,11 +222,7 @@ const IndexPage = () => {
               alt="Athlete performing pullups"
             />
           </div>
-          <div
-            data-sal="slide-right"
-            data-sal-duration="1000"
-            data-sal-easing="ease"
-          >
+          <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease">
             <Img
               fluid={data.postworkout.childImageSharp.fluid}
               alt="Coach giving athlete a fist bump after workout"
@@ -254,18 +250,14 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="bottomPhotos right">
-          <div
-            data-sal="slide-left"
-            data-sal-duration="1000"
-            data-sal-easing="ease"
-          >
+          <div data-sal="fade" data-sal-duration="1000" data-sal-easing="ease">
             <Img
               fluid={data.boxjumps.childImageSharp.fluid}
               alt="Athlete jumping onto plyo box"
             />
           </div>
           <div
-            data-sal="slide-left"
+            data-sal="fade"
             data-sal-duration="1000"
             data-sal-easing="ease-in-out"
           >
