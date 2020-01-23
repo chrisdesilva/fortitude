@@ -23,6 +23,15 @@ const Coaches = props => {
         <div className="coaches__bio">
           <h3>Coach Athan</h3>
           <p>
+            Certifications: A.C.E. Certified Personal Trainer, 1998, CrossFit
+            Level 1 Trainer, 2012, U.S. Army Master Fitness Trainer, 2013, U.S.
+            Army Master Fitness Trainer - Instructor, 2014, NSCA Certified
+            Strength & Conditioning Specialist, 2014, Eat To Perform Nutrition
+            Certification, 2016, CrossFit Level 2 Trainer, 2017, CrossFit
+            Adaptive Athlete Trainer, 2017, Precision Nutrition Level 1 Coach,
+            2018
+          </p>
+          <p>
             Athan Schindler is a former U.S. Army Airborne Ranger. In addition
             to owning and coaching at two CrossFit gyms, he currently serves as
             a Master Fitness Trainer for the U.S. Army. But don’t be
@@ -30,7 +39,6 @@ const Coaches = props => {
             life is to help others achieve optimal health, deep human
             connection, and self-actualization.
           </p>
-          <p></p>
         </div>
       </div>
       <div

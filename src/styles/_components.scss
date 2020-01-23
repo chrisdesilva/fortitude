@@ -250,6 +250,7 @@ a {
     width: 12rem;
     margin: 1rem 1rem;
     transition: all 300ms;
+    filter: brightness(100%);
   }
 
   &-open {

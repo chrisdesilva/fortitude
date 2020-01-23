@@ -39,7 +39,6 @@
   }
 
   h1 {
-    letter-spacing: 2px;
     width: 100%;
   }
 
@@ -67,7 +66,7 @@
 
   h2 {
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin: 1rem 0 0.5rem 0;
     font-size: 2rem;
   }
@@ -146,8 +145,7 @@
   }
 
   h2 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin-top: 2rem;
   }
 
@@ -180,7 +178,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 5rem;
+  padding: 5rem 1rem;
   text-align: center;
   grid-area: pricing;
   background-color: darken($strive-red, 20);
@@ -219,7 +217,7 @@
 
   @include lg {
     margin: 1rem 10px 10px 0;
-    padding: 0;
+    padding: 3rem 1rem;
     // -webkit-clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     // clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
     border-radius: 5px;
@@ -231,8 +229,7 @@
   }
 
   h2 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin-top: 2rem;
     color: white;
 
@@ -297,8 +294,7 @@
   }
 
   h2 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
   }
@@ -311,8 +307,7 @@
   padding-top: 5rem;
 
   h2 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 0;
@@ -369,8 +364,7 @@
   padding-top: 5rem;
 
   h2 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
   }

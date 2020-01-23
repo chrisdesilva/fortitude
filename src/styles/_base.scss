@@ -10,41 +10,41 @@ $breakpoint-xl: 1200px;
 // Small devices
 @mixin sm {
   @media (min-width: #{$breakpoint-sm}) {
-      @content;
+    @content;
   }
 }
 
 // Medium devices
 @mixin md {
   @media (min-width: #{$breakpoint-md}) {
-      @content;
+    @content;
   }
 }
 
 // Large devices
 @mixin lg {
   @media (min-width: #{$breakpoint-lg}) {
-      @content;
+    @content;
   }
 }
 
 // Extra large devices
 @mixin xl {
   @media (min-width: #{$breakpoint-xl}) {
-      @content;
+    @content;
   }
 }
 
 // ----- COLORS ----- //
 
-$strive-blue: #2A83EB;
+$strive-blue: #2a83eb;
 
-$strive-red: #F01E13;
+$strive-red: #f01e13;
 $x-light-red: rgb(240, 226, 226);
 
 $black: rgb(39, 39, 39);
 
 // ----- FONTS ----- //
 
-$font-body: 'Oswald', sans-serif;
-$font-header: 'Anton', sans-serif;
+$font-body: "Oswald", sans-serif;
+$font-header: "Oswald", sans-serif;
