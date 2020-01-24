@@ -4,7 +4,7 @@ const Pricing = () => {
   return (
     <div
       data-sal="fade"
-      data-sal-duration="1000"
+      data-sal-duration="500"
       data-sal-easing="ease-in-out"
       className="pricing"
     >

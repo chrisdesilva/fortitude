@@ -32,12 +32,12 @@ const Coaches = props => {
             2018
           </p>
           <p>
-            Athan Schindler is a former U.S. Army Airborne Ranger. In addition
-            to owning and coaching at two CrossFit gyms, he currently serves as
-            a Master Fitness Trainer for the U.S. Army. But don’t be
-            intimidated- Athan has a big smile and a big heart. His mission in
-            life is to help others achieve optimal health, deep human
-            connection, and self-actualization.
+            Athan is a former U.S. Army Airborne Ranger. In addition to owning
+            and coaching at two CrossFit gyms, he currently serves as a Master
+            Fitness Trainer for the U.S. Army. But don’t be intimidated- Athan
+            has a big smile and a big heart. His mission in life is to help
+            others achieve optimal health, deep human connection, and
+            self-actualization.
           </p>
         </div>
       </div>
@@ -58,10 +58,10 @@ const Coaches = props => {
             kids, CF Endurance, USA weightlifting sports performance coach
           </p>
           <p>
-            Kady Skinner was voted the Best Fitness Instructor in Bastrop for
-            2019. She has been coaching and competing in CrossFit for over seven
-            years. Kady is knowledgeable, encouraging, and loud (in a good way).
-            She’s a Fit Mom who believes that strength is beauty!
+            Kady was voted the Best Fitness Instructor in Bastrop for 2019. She
+            has been coaching and competing in CrossFit for over seven years.
+            Kady is knowledgeable, encouraging, and loud (in a good way). She’s
+            a Fit Mom who believes that strength is beauty!
           </p>
         </div>
       </div>
@@ -81,11 +81,11 @@ const Coaches = props => {
             CPT (expired)
           </p>
           <p>
-            Cody Skinner is the founder of Fortitude Barbell Club and Operations
-            Manager at CrossFit Strive. With over seven years of experience in
-            CrossFit and six years in competitive weightlifting, Cody is
-            sometimes referred to as “the Yoda of the Barbell” due to his
-            ability to break down and teach complex movements.
+            Cody is the founder of Fortitude Barbell Club and Operations Manager
+            at CrossFit Strive. With over seven years of experience in CrossFit
+            and six years in competitive weightlifting, Cody is sometimes
+            referred to as “the Yoda of the Barbell” due to his ability to break
+            down and teach complex movements.
           </p>
         </div>
       </div>
@@ -102,11 +102,11 @@ const Coaches = props => {
           <h3>Coach Lexi</h3>
           <p>Certifications: CF L1</p>
           <p>
-            Lexi Grose is a former gymnast who fell in love with CrossFit in
-            2017. After receiving her Level 1 certification, Lexi brought her
-            passion for community and newly-achieved coaching skills back to
-            Strive. She creates a training environment that is fun, focused, and
-            challenging for everyone.
+            Lexi is a former gymnast who fell in love with CrossFit in 2017.
+            After receiving her Level 1 certification, Lexi brought her passion
+            for community and newly-achieved coaching skills back to Strive. She
+            creates a training environment that is fun, focused, and challenging
+            for everyone.
           </p>
         </div>
       </div>

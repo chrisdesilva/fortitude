@@ -11,17 +11,13 @@ import {
 const Classes = props => {
   return (
     <div className="classes">
-      <h2
-        data-sal="fade"
-        data-sal-duration="1000"
-        data-sal-easing="ease-in-out"
-      >
+      <h2 data-sal="fade" data-sal-duration="500" data-sal-easing="ease-in-out">
         Programs
       </h2>
       <div className="classes__content">
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
@@ -43,7 +39,7 @@ const Classes = props => {
         </div>
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
@@ -65,7 +61,7 @@ const Classes = props => {
         </div>
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
@@ -86,7 +82,7 @@ const Classes = props => {
         </div>
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
@@ -108,7 +104,7 @@ const Classes = props => {
         </div>
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
@@ -128,7 +124,7 @@ const Classes = props => {
         </div>
         <div
           data-sal="fade"
-          data-sal-duration="1000"
+          data-sal-duration="500"
           data-sal-easing="ease-in-out"
           className="classes__class"
         >
