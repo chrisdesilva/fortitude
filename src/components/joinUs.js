@@ -128,7 +128,6 @@ const JoinUs = props => {
                 onChange={handleInputChange}
                 type="tel"
                 name="phone"
-                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
                 placeholder="123-456-7898"
                 value={values.phone}
               />
