@@ -354,12 +354,12 @@ const IndexPage = () => {
         </div>
         © {new Date().getFullYear()} CrossFit Strive Bastrop
         <a
-          href="http://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
+          href="https://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
           target="_blank"
           title="CrossFit Journal: The Performance-Based Lifestyle Resource"
         >
           <img
-            src="http://journal.crossfit.com/templates/images/white-125x63.png"
+            src="https://journal.crossfit.com/templates/images/white-125x63.png"
             width="125px"
             height="63px"
             alt="CrossFit Journal: The Performance-Based Lifestyle Resource"
