@@ -6,4 +6,10 @@ exports.createPages = ({ graphql, actions }) => {
     isPermanent: true,
     force: true,
   })
+  createRedirect({
+    fromPath: "https://www.crossfitstrive.net/*",
+    toPath: "https://www.crossfitstrivebastrop.com/:splat",
+    isPermanent: true,
+    force: true,
+  })
 }
