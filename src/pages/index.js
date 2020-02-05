@@ -229,25 +229,18 @@ const IndexPage = () => {
             />
           </div>
         </div>
-        <div className="bottomPhotos middle">
-          <Img
-            className="middleImage"
-            fluid={data.fullGym.childImageSharp.fluid}
-            alt="CrossFit gym setting up full of athletes"
-          />
-          <div
-            data-sal="fade"
-            data-sal-duration="500"
-            data-sal-easing="ease-in-out"
-            className="values"
-          >
-            <h3>OUR VALUES</h3>
-            <p>FAIL OFTEN</p>
-            <p>DO THE WORK</p>
-            <p>OWN YOUR LIFE</p>
-            <p>PRIORITIZE WHAT MATTERS</p>
-            <p>KINDNESS OVER EVERYTHING</p>
-          </div>
+        <div
+          className="bottomPhotos middle"
+          data-sal="fade"
+          data-sal-duration="500"
+          data-sal-easing="ease-in-out"
+        >
+          <h3>OUR VALUES</h3>
+          <p>FAIL OFTEN</p>
+          <p>DO THE WORK</p>
+          <p>OWN YOUR LIFE</p>
+          <p>PRIORITIZE WHAT MATTERS</p>
+          <p>KINDNESS OVER EVERYTHING</p>
         </div>
         <div className="bottomPhotos right">
           <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
