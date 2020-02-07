@@ -49,6 +49,7 @@ const Layout = ({ children }, props) => {
           </div>
           <div className="footer__contact">
             <iframe
+              title="Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13805.434488145698!2d-97.346715!3d30.11255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x770de78066f1da5e!2sCrossFit%20Strive%20Bastrop!5e0!3m2!1sen!2sus!4v1575587420411!5m2!1sen!2sus"
               maxWidth="600"
               maxHeight="450"
@@ -74,6 +75,7 @@ const Layout = ({ children }, props) => {
             <a
               href="https://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
               target="_blank"
+              rel="noreferrer noopener"
               title="CrossFit Journal: The Performance-Based Lifestyle Resource"
             >
               <img

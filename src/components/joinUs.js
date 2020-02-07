@@ -1,63 +1,64 @@
-import React, { useState } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import { Collapse } from "react-collapse"
 import { FaCheckSquare } from "react-icons/fa"
+import Helmet from "react-helmet"
 
 const JoinUs = props => {
-  const [twoWeeks, setTwoWeeks] = useState(false)
-  const [moreInfo, setMoreInfo] = useState(false)
-  const [thankYou, setThankYou] = useState(false)
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    comments: "",
-    reason: "",
-  })
+  // const [twoWeeks, setTwoWeeks] = useState(false)
+  // const [moreInfo, setMoreInfo] = useState(false)
+  // const [thankYou, setThankYou] = useState(false)
+  // const [values, setValues] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   comments: "",
+  //   reason: "",
+  // })
 
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
+  // const encode = data => {
+  //   return Object.keys(data)
+  //     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //     .join("&")
+  // }
 
-  const handleInputChange = e => {
-    const { name, value } = e.target
-    setValues({ ...values, [name]: value })
-  }
+  // const handleInputChange = e => {
+  //   const { name, value } = e.target
+  //   setValues({ ...values, [name]: value })
+  // }
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...values,
-      }),
-    })
-      .then(() => {
-        setThankYou(
-          "Thanks for getting in touch! We'll reach out shortly to talk about how we can help you start crushing goals."
-        )
-      })
-      .catch(error => console.log(error))
-  }
+  // const handleSubmit = e => {
+  //   e.preventDefault()
+  //   const form = e.target
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({
+  //       "form-name": form.getAttribute("name"),
+  //       ...values,
+  //     }),
+  //   })
+  //     .then(() => {
+  //       setThankYou(
+  //         "Thanks for getting in touch! We'll reach out shortly to talk about how we can help you start crushing goals."
+  //       )
+  //     })
+  //     .catch(error => console.log(error))
+  // }
 
-  const chooseTwoweeks = e => {
-    e.preventDefault()
-    setTwoWeeks(true)
-    setMoreInfo(false)
-    setValues({ ...values, reason: "Two free weeks" })
-  }
+  // const chooseTwoweeks = e => {
+  //   e.preventDefault()
+  //   setTwoWeeks(true)
+  //   setMoreInfo(false)
+  //   setValues({ ...values, reason: "Two free weeks" })
+  // }
 
-  const chooseMoreInfo = e => {
-    e.preventDefault()
-    setTwoWeeks(false)
-    setMoreInfo(true)
-    setValues({ ...values, reason: "More information" })
-  }
+  // const chooseMoreInfo = e => {
+  //   e.preventDefault()
+  //   setTwoWeeks(false)
+  //   setMoreInfo(true)
+  //   setValues({ ...values, reason: "More information" })
+  // }
 
   return (
     <div className="joinUs">
@@ -94,7 +95,24 @@ const JoinUs = props => {
       )}
 
       <Collapse isOpened={props.form}>
-        <form
+        <iframe
+          title="Learn more form"
+          src="http://trial-13A012D9.zenplanner.com/zenplanner/portal/prospect.cfm?programId=A4BC64AD-86D3-4DDB-9962-411EF4AE5815&frame=true"
+          style={{ width: "100%", height: "500px" }}
+          frameborder="0"
+          id="idZenPlannerFrame"
+        >
+          <noframes>
+            <a href="http://trial-13A012D9.zenplanner.com/zenplanner/portal/prospect.cfm?programId=A4BC64AD-86D3-4DDB-9962-411EF4AE5815">
+              Online Prospect Form
+            </a>
+          </noframes>
+        </iframe>
+        <Helmet>
+          <script src="https://trial-13A012D9.zenplanner.com/zenplanner/skin/js/resize.js"></script>
+        </Helmet>
+
+        {/*<form
           name="strive-contact"
           className="form"
           method="post"
@@ -168,10 +186,11 @@ const JoinUs = props => {
               </button>
             </React.Fragment>
           )}
+          
           <Collapse isOpened={thankYou}>
             <p>{thankYou}</p>
           </Collapse>
-        </form>
+                </form>*/}
       </Collapse>
 
       <h2>Do you want to...</h2>
