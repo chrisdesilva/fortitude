@@ -2,7 +2,6 @@ import React from "react"
 import Img from "gatsby-image"
 import { Collapse } from "react-collapse"
 import { FaCheckSquare } from "react-icons/fa"
-import Helmet from "react-helmet"
 
 const JoinUs = props => {
   // const [twoWeeks, setTwoWeeks] = useState(false)
@@ -108,9 +107,7 @@ const JoinUs = props => {
             </a>
           </noframes>
         </iframe>
-        <Helmet>
-          <script src="https://trial-13A012D9.zenplanner.com/zenplanner/skin/js/resize.js"></script>
-        </Helmet>
+        <script src="https://trial-13A012D9.zenplanner.com/zenplanner/skin/js/resize.js"></script>
 
         {/*<form
           name="strive-contact"
