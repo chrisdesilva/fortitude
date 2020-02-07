@@ -108,9 +108,6 @@ const JoinUs = props => {
             </a>
           </noframes>
         </iframe>
-        <Helmet>
-          <script src="https://trial-13A012D9.zenplanner.com/zenplanner/skin/js/resize.js"></script>
-        </Helmet>
 
         {/*<form
           name="strive-contact"
