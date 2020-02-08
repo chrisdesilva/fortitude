@@ -12,4 +12,28 @@ exports.createPages = ({ graphql, actions }) => {
     isPermanent: true,
     force: true,
   })
+  createRedirect({
+    fromPath: "https://www.crossfitstrive.net/class-schedule",
+    toPath: "/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "https://www.crossfitstrive.net/about-us",
+    toPath: "/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "https://www.crossfitstrive.net/getting-started",
+    toPath: "/",
+    isPermanent: true,
+    force: true,
+  })
+  createRedirect({
+    fromPath: "https://www.crossfitstrive.net/nutritional-coaching",
+    toPath: "/",
+    isPermanent: true,
+    force: true,
+  })
 }
