@@ -52,35 +52,7 @@ const IndexPage = () => {
           }
         }
       }
-      kids: file(relativePath: { eq: "kids_exercising.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       pullups: file(relativePath: { eq: "pullups.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      fullGym: file(relativePath: { eq: "full_gym.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      fistBump: file(relativePath: { eq: "fist_bump.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      laughing: file(relativePath: { eq: "laughing_on_rower.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
