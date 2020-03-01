@@ -96,7 +96,7 @@ a {
   background: transparent;
 
   &__opacity {
-    background: $x-light-red;
+    background: #f7f7f7;
   }
 }
 
@@ -235,10 +235,10 @@ a {
   }
 
   &.showNav {
-    background-color: white;
+    background-color: black;
 
     span {
-      color: $strive-red;
+      color: white;
       cursor: pointer;
     }
     img {

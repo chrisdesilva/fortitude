@@ -48,20 +48,19 @@ const Coaches = props => {
         className="coaches__row"
       >
         <div className="coaches__photo">
-          <Img fluid={props.kady} alt="Coach Kady" />
+          <Img fluid={props.juan} alt="Coach Juan" />
         </div>
         <div className="coaches__bio">
-          <h3>Coach Kady</h3>
+          <h3>Coach Juan</h3>
           <p className="coaches__bio--cert">
-            Certifications: Bachelor's in Applied Exercise Physiology from Texas
-            A&M. NASM PT certification, Yoga 1 certification, CF L1, CF L2, CF
-            kids, CF Endurance, USA weightlifting sports performance coach
+            Certifications: Bachelor's degree in Kinesiology, CFL2
           </p>
           <p>
-            Kady was voted the Best Fitness Instructor in Bastrop for 2019. She
-            has been coaching and competing in CrossFit for over seven years.
-            Kady is knowledgeable, encouraging, and loud (in a good way). She’s
-            a Fit Mom who believes that strength is beauty!
+            Juan is a former collegiate soccer player who developed a passion
+            for fitness at an early age. With over 8 years of Crossfit
+            experience, Juan enjoys sharing his wisdom with the Fortitude
+            family. Juan is laid back, focused, and eager to help each and every
+            person he trains.
           </p>
         </div>
       </div>
@@ -117,41 +116,21 @@ const Coaches = props => {
         className="coaches__row"
       >
         <div className="coaches__photo">
-          <Img fluid={props.jessica} alt="Coach Jessica" />
+          <Img fluid={props.elma} alt="Coach Elma" />
         </div>
         <div className="coaches__bio">
-          <h3>Coach Jessica</h3>
-          <p>
-            Certifications: CF L1, CF Mobility Certificate, CF Gymnastics
-            Certificate, Coached volleyball, basketball and track for 6 years
-          </p>
-          <p>
-            Jessica is an enthusiastic coach who has a passion for health and
-            fitness. She was a competitive, multi-sport athlete growing up. She
-            found CrossFit in 2009 and knew it was a methodology she wanted to
-            be a part of. Since, she has been in many competitions, and attended
-            the CrossFit gymnastics and Mobility courses and has her CrossFit
-            Level 1.
-          </p>
-        </div>
-      </div>
-      <div
-        data-sal="fade"
-        data-sal-duration="500"
-        data-sal-easing="ease-in-out"
-        className="coaches__row"
-      >
-        <div className="coaches__photo">
-          <Img fluid={props.rebekah} alt="Coach Rebekah" />
-        </div>
-        <div className="coaches__bio">
-          <h3>Coach Rebekah</h3>
+          <h3>Coach Elma</h3>
           <p>Certifications: CF L1</p>
           <p>
-            Rebekah was a crisis counselor for victims of domestic violence for
-            over 15 years, which is where she learned to meet a person's
-            emotional needs and that has now brought her to a place at Strive
-            where she can translate those tools into CrossFit and coaching.
+            Elma discovered an enthusiasm for fitness after trying CrossFit in
+            order to get in shape. Lacking an athletic background, and initially
+            somewhat daunted by the difficult workouts, with time Elma soon
+            began to embrace the challenge and the feeling of being pushed
+            outside of her comfort zone. After four years of CrossFit, and
+            having recognized the positive impact it had on her life, Elma
+            decided to get her L1 so that she could be a part of inspiring
+            fitness in others. Elma enjoys making CrossFit accessible to people
+            at all levels of fitness and all skill levels.
           </p>
         </div>
       </div>
@@ -162,20 +141,72 @@ const Coaches = props => {
         className="coaches__row"
       >
         <div className="coaches__photo">
-          <Img fluid={props.sarah} alt="Coach Sarah" />
+          <Img fluid={props.andy} alt="Coach Andy" />
         </div>
         <div className="coaches__bio">
-          <h3>Coach Sarah</h3>
+          <h3>Coach Andy</h3>
           <p>
-            Certifications: Bachelor's in Exercise and Sport Science with a
-            concentration in Health and Fitness Management from Texas State
-            (2020). NASM-CPT, CF L1
+            Certifications: CF-L1, CF-L2, Applied Functional Science - Gray
+            Institute, Functional Soft Tissue, Transformation - Gray Institute,
+            Myokinematic Restoration - Postural Restoration Institute, Licensed
+            Massage Therapist (July 2020), The Art of Breath - Power, Speed,
+            Endurance
           </p>
           <p>
-            Sarah fell in love with fitness in 2014 after taking a weightlifting
-            class in college. It eventually led her to Crossfit Strive, where
-            she found home. She is passionate about evidence-based fitness,
-            strength training, and having fun while training hard.
+            Andy found his love for coaching back in 2005 while giving wrestling
+            lessons to up and coming athletes. Since then he has bounced between
+            his own athletic endeavors and coaching. Andy hung up his personal
+            athletic career in 2018 and has since then been solely focused on
+            coaching. He has a deep fascination for how the human body works and
+            improving health from more than just a training aspect. Andy strives
+            to embody a holistic approach to training and health.
+          </p>
+        </div>
+      </div>
+      <div
+        data-sal="fade"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        className="coaches__row"
+      >
+        <div className="coaches__photo">
+          <Img fluid={props.corrie} alt="Coach Corrie" />
+        </div>
+        <div className="coaches__bio">
+          <h3>Coach Corrie</h3>
+          <p>Certifications: CF L1</p>
+          <p>
+            Corrie is a former dancer who struggled to find a fitness routine to
+            replace dancing after high school. When Corrie discovered CrossFit
+            in 2012, she found the community, coaching, variety, and intensity
+            she was missing, and the nutrition knowledge and strength she has
+            gained were an added bonus. Corrie has always been driven to help
+            others, and earned her CrossFit L1 certificate in 2016 so she can
+            share her love of CrossFit and help others on their road to fitness.
+          </p>
+        </div>
+      </div>
+      <div
+        data-sal="fade"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        className="coaches__row"
+      >
+        <div className="coaches__photo">
+          <Img fluid={props.alex} alt="Coach Alex" />
+        </div>
+        <div className="coaches__bio">
+          <h3>Coach Alex</h3>
+          <p>Certifications: CF L1, CF L2</p>
+          <p>
+            A Northern California native, Alex discovered CrossFit by watching
+            her Aunt do HSPUs and she said "That. I want to do that". She has
+            been Crossfitting since 2009 and fell in love with the community,
+            inspiring her to train, compete, and succeed in ways she never could
+            have on her own. A jack-of-all-trades, Alex is a knowledgeable and
+            fun coach for all levels. While in school for physical therapy she
+            enjoys bringing her knowledge into her classes by focusing on
+            bio-mechanics, rehab, and mobility.
           </p>
         </div>
       </div>

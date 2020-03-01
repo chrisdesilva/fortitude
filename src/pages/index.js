@@ -45,35 +45,35 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      squat: file(relativePath: { eq: "barbell_on_back.jpg" }) {
+      dualdeadlift: file(relativePath: { eq: "dual_deadlift.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      pullups: file(relativePath: { eq: "pullups.png" }) {
+      frontsquat: file(relativePath: { eq: "front_squats.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      postworkout: file(relativePath: { eq: "pound.jpg" }) {
+      dumbbells: file(relativePath: { eq: "dumbbells_overhead.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      kbswings: file(relativePath: { eq: "single_arm_swings.jpg" }) {
+      ropeclimb: file(relativePath: { eq: "rope_climb.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      humble: file(relativePath: { eq: "humble_hustle.jpg" }) {
+      teamphoto: file(relativePath: { eq: "team_photo.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -94,35 +94,35 @@ const IndexPage = () => {
           }
         }
       }
-      kady: file(relativePath: { eq: "Kady_headshot.jpg" }) {
+      alex: file(relativePath: { eq: "coach_alex.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      lexi: file(relativePath: { eq: "Lexi_headshot.jpg" }) {
+      lexi: file(relativePath: { eq: "coach_lexi.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      jessica: file(relativePath: { eq: "Jessica_headshot.jpg" }) {
+      andy: file(relativePath: { eq: "coach_andy.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      rebekah: file(relativePath: { eq: "Rebekah_Headshot.jpg" }) {
+      corrie: file(relativePath: { eq: "coach_corrie.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      sarah: file(relativePath: { eq: "sarah_Headshot.jpg" }) {
+      elma: file(relativePath: { eq: "coach_elma.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -136,14 +136,7 @@ const IndexPage = () => {
           }
         }
       }
-      best2018: file(relativePath: { eq: "2018-Best-of-Bastrop.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      best2019: file(relativePath: { eq: "2019-Best-of-Bastrop.png" }) {
+      juan: file(relativePath: { eq: "coach_juan.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -160,29 +153,24 @@ const IndexPage = () => {
       <div className="container">
         <LeadContent onClick={scrollToForm} />
         <JoinUs
-          fluid={data.squat.childImageSharp.fluid}
+          fluid={data.dualdeadlift.childImageSharp.fluid}
           form={form}
           showForm={() => showForm(true)}
         />
         <Schedule scroll={scrollToClasses} />
         <Pricing />
-        <Classes
-          onClick={scrollToForm}
-          fluid={data.kbswings.childImageSharp.fluid}
-        />
+        <Classes onClick={scrollToForm} />
         <Coaches
           athan={data.athan.childImageSharp.fluid}
           cody={data.cody.childImageSharp.fluid}
-          kady={data.kady.childImageSharp.fluid}
+          andy={data.andy.childImageSharp.fluid}
           lexi={data.lexi.childImageSharp.fluid}
-          sarah={data.sarah.childImageSharp.fluid}
-          jessica={data.jessica.childImageSharp.fluid}
-          rebekah={data.rebekah.childImageSharp.fluid}
+          juan={data.juan.childImageSharp.fluid}
+          alex={data.alex.childImageSharp.fluid}
+          corrie={data.corrie.childImageSharp.fluid}
+          elma={data.elma.childImageSharp.fluid}
         />
-        <Reviews
-          best2018={data.best2018.childImageSharp.fluid}
-          best2019={data.best2019.childImageSharp.fluid}
-        />
+        <Reviews />
         <div className="bottomPhotos left">
           <div
             data-sal="fade"
@@ -190,14 +178,14 @@ const IndexPage = () => {
             data-sal-easing="ease-in-out"
           >
             <Img
-              fluid={data.pullups.childImageSharp.fluid}
-              alt="Athlete performing pullups"
+              fluid={data.frontsquat.childImageSharp.fluid}
+              alt="Group fitness class"
             />
           </div>
           <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
             <Img
-              fluid={data.postworkout.childImageSharp.fluid}
-              alt="Coach giving athlete a fist bump after workout"
+              fluid={data.dumbbells.childImageSharp.fluid}
+              alt="Athlete carrying two dumbbells overhead"
             />
           </div>
         </div>
@@ -208,16 +196,16 @@ const IndexPage = () => {
           data-sal-easing="ease-in-out"
         >
           <h3>OUR VALUES</h3>
-          <p>FAIL OFTEN</p>
-          <p>DO THE WORK</p>
-          <p>OWN YOUR LIFE</p>
-          <p>PRIORITIZE WHAT MATTERS</p>
-          <p>KINDNESS OVER EVERYTHING</p>
+          <p>COMMITMENT</p>
+          <p>RESPECT</p>
+          <p>SELFLESS SERVICE</p>
+          <p>INTEGRITY</p>
+          <p>PERSONAL COURAGE</p>
         </div>
         <div className="bottomPhotos right">
           <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
             <Img
-              fluid={data.boxjumps.childImageSharp.fluid}
+              fluid={data.ropeclimb.childImageSharp.fluid}
               alt="Athlete jumping onto plyo box"
             />
           </div>
@@ -227,13 +215,13 @@ const IndexPage = () => {
             data-sal-easing="ease-in-out"
           >
             <Img
-              fluid={data.humble.childImageSharp.fluid}
+              fluid={data.teamphoto.childImageSharp.fluid}
               alt="Team Hubmle Hustle posing for a picture"
             />
           </div>
         </div>
         <form
-          name="strive-contact"
+          name="fortitude-contact"
           data-netlify="true"
           netlify-honeypot="bot-field"
           hidden
@@ -247,7 +235,7 @@ const IndexPage = () => {
           <textarea name="comments" />
         </form>
         <form
-          name="strive-hold"
+          name="fortitude-hold"
           data-netlify="true"
           netlify-honeypot="bot-field"
           hidden
@@ -258,7 +246,7 @@ const IndexPage = () => {
           <input type="textarea" name="reason" />
         </form>
         <form
-          name="strive-cancel"
+          name="fortitude-cancel"
           data-netlify="true"
           netlify-honeypot="bot-field"
           hidden
@@ -271,21 +259,21 @@ const IndexPage = () => {
       <footer className="footer">
         <div className="footer__links">
           <a
-            href="https://facebook.com/crossfitstrivebastrop"
+            href="https://www.facebook.com/FortitudeFitness/"
             target="_blank"
             rel="noreferrer noopener"
           >
             <FaFacebookSquare />
           </a>
           <a
-            href="https://instagram.com/crossfitstrivebastrop"
+            href="https://www.instagram.com/fortitude_austin/"
             target="_blank"
             rel="noreferrer noopener"
           >
             <FaInstagram />
           </a>
           <a
-            href="mailto:info@crossfitstrive.com"
+            href="mailto:athan@easyisevil.com"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -295,21 +283,21 @@ const IndexPage = () => {
         <div className="footer__contact">
           <iframe
             title="Google Maps"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13805.434488145698!2d-97.346715!3d30.11255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x770de78066f1da5e!2sCrossFit%20Strive%20Bastrop!5e0!3m2!1sen!2sus!4v1575587420411!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.612544361549!2d-97.6734066843478!3d30.276618981798414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b42d08a0538b%3A0x38925c8ffd0e1258!2sFortitude%20Strength%20%26%20Conditioning%20-%20Easy%20is%20Evil%20CrossFit!5e0!3m2!1sen!2sus!4v1582985111356!5m2!1sen!2sus"
             maxwidth="600"
             maxheight="450"
             frameBorder="0"
             style={{ border: 0 }}
             allowFullScreen=""
           ></iframe>
-          <a href="tel:+1-512-555-9876">512-555-9876</a>
+          <a href="tel:+1-512-387-4164">512-387-4164</a>
           <a
-            href="https://goo.gl/maps/B362Ye6MUBcPYLvy8"
+            href="https://goo.gl/maps/UoCRgdf3ESxGtkB1A"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p>623 Highway 71 West, Suite 108</p>
-            <p>Bastrop, TX 78602</p>
+            <p>6001 Techni Center Dr, Unit F</p>
+            <p>Austin, TX 78721</p>
           </a>
           <Link className="membership" to="/membershiphold">
             Membership Hold
@@ -318,7 +306,7 @@ const IndexPage = () => {
             Membership Cancellation
           </Link>
         </div>
-        © {new Date().getFullYear()} CrossFit Strive Bastrop
+        © {new Date().getFullYear()} Fortitude Strength & Conditioning
         <a
           href="https://journal.crossfit.com/start.tpl?version=CFJ-white123x63"
           target="_blank"

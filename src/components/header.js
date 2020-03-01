@@ -2,8 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useEffect, useRef, useState } from "react"
 import { Collapse } from "react-collapse"
-import logo from "../images/strive_logo.png"
-import whiteLogo from "../images/WhiteMedium.png"
+import logo from "../images/fortitude_logo.png"
 import animateScrollTo from "animated-scroll-to"
 
 const Header = props => {
@@ -72,10 +71,7 @@ const Header = props => {
       <header className={navBackground ? "showNav" : null} id="navbar--md">
         <div id="navbar--md__logo">
           <Link to="/">
-            <img
-              src={navBackground ? logo : whiteLogo}
-              alt="CrossFit Strive logo"
-            />
+            <img src={logo} alt="CrossFit Strive logo" />
           </Link>
         </div>
 

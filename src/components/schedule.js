@@ -30,19 +30,19 @@ const Schedule = props => {
               <th>Monday-Friday</th>
             </tr>
             <tr>
-              <td>5:30am | 6:45am | 12:00pm | 4:30pm | 5:45pm | 7:00pm</td>
+              <td>5:15am | 6:30am | 12:00pm | 5:30pm | 6:45pm</td>
             </tr>
             <tr>
               <th>Saturday</th>
             </tr>
             <tr>
-              <td>8:00am | 9:15am | 10:30am</td>
+              <td>8:00am | 9:15am</td>
             </tr>
             <tr>
               <th>Sunday</th>
             </tr>
             <tr>
-              <td>9:00am</td>
+              <td>9:30am</td>
             </tr>
           </tbody>
         </table>
@@ -52,7 +52,7 @@ const Schedule = props => {
         className={isPumpBurnOpen ? "strive-red" : undefined}
       >
         <FaFire />
-        <p>Pump 30/Burn 30</p>
+        <p>Pump & Burn</p>
       </span>
       <Collapse isOpened={isPumpBurnOpen}>
         <table className="schedule--crossfit__table">
@@ -61,19 +61,13 @@ const Schedule = props => {
               <th>Monday-Wednesday-Friday</th>
             </tr>
             <tr>
-              <td>9:30am Pump / 10:00am Burn</td>
-            </tr>
-            <tr>
-              <td>5:45pm Pump / 6:15pm Burn</td>
+              <td>9:30am</td>
             </tr>
             <tr>
               <th>Tuesday-Thursday</th>
             </tr>
             <tr>
-              <td>5:30am Pump / 6:00am Burn</td>
-            </tr>
-            <tr>
-              <td>9:30am Pump / 10:00am Burn</td>
+              <td>5:30pm</td>
             </tr>
           </tbody>
         </table>
@@ -89,22 +83,28 @@ const Schedule = props => {
         <table className="schedule--crossfit__table">
           <tbody>
             <tr>
-              <th>Tuesday</th>
+              <th>Monday-Wednesday</th>
             </tr>
             <tr>
-              <td>4:30pm | 5:45pm</td>
+              <td>5:30pm | 6:45pm</td>
             </tr>
             <tr>
-              <th>Thursday</th>
+              <th>Friday</th>
             </tr>
             <tr>
-              <td>4:30pm | 5:45pm</td>
+              <td>5:30pm</td>
             </tr>
             <tr>
               <th>Saturday</th>
             </tr>
             <tr>
-              <td>8:00am</td>
+              <td>10:00am</td>
+            </tr>
+            <tr>
+              <th>Sunday</th>
+            </tr>
+            <tr>
+              <td>9:30am</td>
             </tr>
           </tbody>
         </table>

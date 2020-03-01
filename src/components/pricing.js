@@ -10,32 +10,36 @@ const Pricing = () => {
     >
       <h2>Pricing</h2>
       <table>
-        <tr>
-          <th colSpan="3">1 Year Commitment</th>
-        </tr>
-        <tr className="row">
-          <td>2x/week: $90/mo</td>
-          <td>3x/week: $103/mo</td>
-          <td>Unlimited: $131/mo</td>
-        </tr>
-        <tr>
-          <th colSpan="3">Month to Month</th>
-        </tr>
-        <tr className="row">
-          <td>2x/week: $110/mo</td>
-          <td>3x/week: $123/mo</td>
-          <td>Unlimited: $151/mo</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th colSpan="3">1 Year Commitment</th>
+          </tr>
+          <tr className="row">
+            <td>2x/week: $121/mo</td>
+            <td>3x/week: $156/mo</td>
+            <td>Unlimited: $208/mo</td>
+          </tr>
+          <tr>
+            <th colSpan="3">Month to Month</th>
+          </tr>
+          <tr className="row">
+            <td>2x/week: $141/mo</td>
+            <td>3x/week: $176/mo</td>
+            <td>Unlimited: $228/mo</td>
+          </tr>
+          <tr>
+            <th colSpan="3">Barbell</th>
+          </tr>
+          <tr className="row">
+            <td colSpan="3">CrossFit add-on: $90/mo</td>
+          </tr>
+          <tr className="row">
+            <td>3 month: $185/mo</td>
+            <td>6 month: $170/mo</td>
+            <td>12 month: $160/mo</td>
+          </tr>
+        </tbody>
       </table>
-      {/*       <p>Drop-In: $20/class</p>
-      <p>2x/week: $100/mo</p>
-      <p>3x/week: $120/mo</p>
-      <p>Unlimited: $130/mo</p>
-      <p>Barbell Club: $100/mo</p>
-      <p style={{margin: 0}}><strong>Family Discount</strong></p>
-      <p>10% off each membership</p>
-      <p style={{margin: 0}}><strong>Hero Discount</strong></p>
-      <p>20% off for active military, first responders, vetarans, and teachers</p> */}
     </div>
   )
 }
