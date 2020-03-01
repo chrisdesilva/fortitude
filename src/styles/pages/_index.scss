@@ -28,7 +28,6 @@
     url("../images/assault_bike.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -486,6 +485,7 @@
     ),
     url("/full_gym.jpg");
   background-size: cover;
+  background-position: bottom;
   @include lg {
     grid-area: middle;
     font-size: 1.5rem;
