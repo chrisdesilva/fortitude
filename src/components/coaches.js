@@ -57,7 +57,7 @@ const Coaches = props => {
           </p>
           <p>
             Juan is a former collegiate soccer player who developed a passion
-            for fitness at an early age. With over 8 years of Crossfit
+            for fitness at an early age. With over 8 years of CrossFit
             experience, Juan enjoys sharing his wisdom with the Fortitude
             family. Juan is laid back, focused, and eager to help each and every
             person he trains.

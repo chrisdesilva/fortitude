@@ -16,10 +16,7 @@ const Schedule = props => {
     >
       <h2>Schedule</h2>
       <p>Click a class below to check the schedule</p>
-      <span
-        onClick={() => toggleCrossfit(!isCrossfitOpen)}
-        className={isCrossfitOpen ? "strive-red" : undefined}
-      >
+      <span onClick={() => toggleCrossfit(!isCrossfitOpen)}>
         <FaHeartbeat />
         <p>CrossFit</p>
       </span>
@@ -47,10 +44,7 @@ const Schedule = props => {
           </tbody>
         </table>
       </Collapse>
-      <span
-        onClick={() => togglePumpBurn(!isPumpBurnOpen)}
-        className={isPumpBurnOpen ? "strive-red" : undefined}
-      >
+      <span onClick={() => togglePumpBurn(!isPumpBurnOpen)}>
         <FaFire />
         <p>Pump & Burn</p>
       </span>
@@ -72,10 +66,7 @@ const Schedule = props => {
           </tbody>
         </table>
       </Collapse>
-      <span
-        onClick={() => toggleBarbell(!isBarbellOpen)}
-        className={isBarbellOpen ? "strive-red" : undefined}
-      >
+      <span onClick={() => toggleBarbell(!isBarbellOpen)}>
         <FaDumbbell />
         <p> Barbell Club</p>
       </span>

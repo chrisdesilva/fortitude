@@ -207,7 +207,7 @@ a {
 
 .animate .bar:nth-child(1) {
   transform: translateY(8px) rotate(135deg);
-  background: $strive-red;
+  background: white;
 }
 
 .animate .bar:nth-child(2) {
@@ -216,7 +216,7 @@ a {
 
 .animate .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-135deg);
-  background: $strive-red;
+  background: white;
 }
 
 // navbar with visible links for tablets and up

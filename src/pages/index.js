@@ -45,44 +45,37 @@ const IndexPage = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      dualdeadlift: file(relativePath: { eq: "dual_deadlift.jpg" }) {
+      overheadsquat: file(relativePath: { eq: "overhead_squats.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       frontsquat: file(relativePath: { eq: "front_squats.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      dumbbells: file(relativePath: { eq: "dumbbells_overhead.jpg" }) {
+      stretching: file(relativePath: { eq: "stretching.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      ropeclimb: file(relativePath: { eq: "rope_climb.jpg" }) {
+      bikelaugh: file(relativePath: { eq: "laughing_on_bike.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       teamphoto: file(relativePath: { eq: "team_photo.jpg" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      boxjumps: file(relativePath: { eq: "box_jumps.jpg" }) {
-        childImageSharp {
-          fluid {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -153,7 +146,7 @@ const IndexPage = () => {
       <div className="container">
         <LeadContent onClick={scrollToForm} />
         <JoinUs
-          fluid={data.dualdeadlift.childImageSharp.fluid}
+          fluid={data.overheadsquat.childImageSharp.fluid}
           form={form}
           showForm={() => showForm(true)}
         />
@@ -184,8 +177,8 @@ const IndexPage = () => {
           </div>
           <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
             <Img
-              fluid={data.dumbbells.childImageSharp.fluid}
-              alt="Athlete carrying two dumbbells overhead"
+              fluid={data.stretching.childImageSharp.fluid}
+              alt="Athletes stretching after workout"
             />
           </div>
         </div>
@@ -196,17 +189,17 @@ const IndexPage = () => {
           data-sal-easing="ease-in-out"
         >
           <h3>OUR VALUES</h3>
-          <p>COMMITMENT</p>
-          <p>RESPECT</p>
-          <p>SELFLESS SERVICE</p>
-          <p>INTEGRITY</p>
-          <p>PERSONAL COURAGE</p>
+          <p>PRIORITIZE WHAT MATTERS</p>
+          <p>DO THE WORK</p>
+          <p>FAIL OFTEN</p>
+          <p>OWN YOUR LIFE</p>
+          <p>KINDNESS OVER EVERYTHING</p>
         </div>
         <div className="bottomPhotos right">
           <div data-sal="fade" data-sal-duration="500" data-sal-easing="ease">
             <Img
-              fluid={data.ropeclimb.childImageSharp.fluid}
-              alt="Athlete jumping onto plyo box"
+              fluid={data.bikelaugh.childImageSharp.fluid}
+              alt="Athletes on assault bikes smiling"
             />
           </div>
           <div
@@ -216,7 +209,7 @@ const IndexPage = () => {
           >
             <Img
               fluid={data.teamphoto.childImageSharp.fluid}
-              alt="Team Hubmle Hustle posing for a picture"
+              alt="Team posing for a picture"
             />
           </div>
         </div>
