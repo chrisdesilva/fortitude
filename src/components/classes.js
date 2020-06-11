@@ -22,14 +22,13 @@ const Classes = props => {
           className="classes__class"
         >
           <div className="classes__content--1">
-            <h3>CrossFit</h3>
+            <h3>Fortitude 60</h3>
             <p>
-              CrossFit consists of constantly varied, functional movements
-              performed at high intensities. Each WOD (Workout of the Day) is
-              designed to improve body composition by burning fat and building
-              muscle. Our coaches will guide you through weight training and/or
-              cardio exercises. The best thing about CrossFit is that anyone can
-              do it! Every workout can be safely scaled for beginning,
+              Our 60 minute class is high intensity training at it’s finest.
+              Workouts combine a variety of functional movements - everything
+              from cardio and gymnastics to power lifting and Olympic lifting.
+              Our coaches will guide you through weight training and/or cardio
+              exercises. Every workout can be safely scaled for beginning,
               intermediate, and advanced athletes.
             </p>
           </div>
@@ -47,7 +46,7 @@ const Classes = props => {
             <h3>Pump & Burn</h3>
             <p>
               Our Pump & Burn classes are a great alternative or supplement to
-              CrossFit. It's a one-hour class of equal amounts of strength
+              Fortitude 60. It's a one-hour class of equal amounts of strength
               training (Pump) and conditioning (Burn). PUMP is a total body
               workout that builds solid, lean muscle. An expert trainer will
               guide you through movements that utilize dumbbells, kettlebells,

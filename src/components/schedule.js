@@ -18,7 +18,7 @@ const Schedule = props => {
       <p>Click a class below to check the schedule</p>
       <span onClick={() => toggleCrossfit(!isCrossfitOpen)}>
         <FaHeartbeat />
-        <p>CrossFit</p>
+        <p>Fortitude 60</p>
       </span>
       <Collapse isOpened={isCrossfitOpen}>
         <table className="schedule--crossfit__table">
