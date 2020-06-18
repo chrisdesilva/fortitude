@@ -27,7 +27,10 @@ const Schedule = props => {
               <th>Monday-Friday</th>
             </tr>
             <tr>
-              <td>5:15am | 6:30am | 12:00pm | 5:30pm | 6:45pm</td>
+              <td>
+                5:00am | 6:15am | 7:30am | 12:00pm | 4:15pm | 5:30pm | 6:45pm
+                (MTTh)
+              </td>
             </tr>
             <tr>
               <th>Saturday</th>
@@ -39,7 +42,7 @@ const Schedule = props => {
               <th>Sunday</th>
             </tr>
             <tr>
-              <td>9:30am</td>
+              <td>8:00am</td>
             </tr>
           </tbody>
         </table>
@@ -74,28 +77,16 @@ const Schedule = props => {
         <table className="schedule--crossfit__table">
           <tbody>
             <tr>
-              <th>Monday-Wednesday</th>
+              <th>Wednesday | Friday</th>
             </tr>
             <tr>
-              <td>5:30pm | 6:45pm</td>
-            </tr>
-            <tr>
-              <th>Friday</th>
-            </tr>
-            <tr>
-              <td>5:30pm</td>
+              <td>6:45pm</td>
             </tr>
             <tr>
               <th>Saturday</th>
             </tr>
             <tr>
-              <td>10:00am</td>
-            </tr>
-            <tr>
-              <th>Sunday</th>
-            </tr>
-            <tr>
-              <td>9:30am</td>
+              <td>11:00am</td>
             </tr>
           </tbody>
         </table>
