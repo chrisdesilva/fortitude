@@ -39,18 +39,19 @@ const JoinUs = props => {
 
       <Collapse isOpened={props.form}>
         <iframe
-          title="Learn more form"
-          src="https://trial-13A012D9.zenplanner.com/zenplanner/portal/prospect.cfm?programId=A4BC64AD-86D3-4DDB-9962-411EF4AE5815&frame=true"
+          src="https://trial-412A73AB.zenplanner.com/zenplanner/portal/sign-up-now.cfm?type=Membership&FRAME=true"
           style={{ width: "100%", height: "500px" }}
-          frameborder="0"
+          frameBorder="0"
           id="idZenPlannerFrame"
         >
           <noframes>
-            <a href="https://trial-13A012D9.zenplanner.com/zenplanner/portal/prospect.cfm?programId=A4BC64AD-86D3-4DDB-9962-411EF4AE5815">
-              Online Prospect Form
+            {" "}
+            <a href="https://trial-412A73AB.zenplanner.com/zenplanner/portal/sign-up-now.cfm">
+              Member Registration
             </a>
-          </noframes>
+          </noframes>{" "}
         </iframe>
+        <script src="https://trial-412A73AB.zenplanner.com/zenplanner/skin/js/resize.js"></script>
       </Collapse>
 
       <h2>Do you want to...</h2>
