@@ -258,9 +258,10 @@
     margin: 2rem 0.5rem;
     display: grid;
     grid-template-rows: 3fr 1fr;
+    width: 40rem;
 
     @include lg {
-      margin: 0 2rem;
+      margin: 2rem;
     }
 
     h3 {
@@ -269,12 +270,11 @@
   }
 
   &__content {
-    @include lg {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
+    @include lg {
       .gatsby-image-wrapper {
         display: none;
       }

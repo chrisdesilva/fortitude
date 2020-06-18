@@ -18,7 +18,7 @@ const Schedule = props => {
       <p>Click a class below to check the schedule</p>
       <span onClick={() => toggleCrossfit(!isCrossfitOpen)}>
         <FaHeartbeat />
-        <p>Fortitude 60</p>
+        <p>F60</p>
       </span>
       <Collapse isOpened={isCrossfitOpen}>
         <table className="schedule--crossfit__table">
@@ -44,7 +44,7 @@ const Schedule = props => {
           </tbody>
         </table>
       </Collapse>
-      <span onClick={() => togglePumpBurn(!isPumpBurnOpen)}>
+      {/* <span onClick={() => togglePumpBurn(!isPumpBurnOpen)}>
         <FaFire />
         <p>Pump & Burn</p>
       </span>
@@ -65,7 +65,7 @@ const Schedule = props => {
             </tr>
           </tbody>
         </table>
-      </Collapse>
+      </Collapse> */}
       <span onClick={() => toggleBarbell(!isBarbellOpen)}>
         <FaDumbbell />
         <p> Barbell Club</p>

@@ -31,7 +31,7 @@ const Pricing = () => {
             <th colSpan="3">Barbell</th>
           </tr>
           <tr className="row">
-            <td colSpan="3">CrossFit add-on: $90/mo</td>
+            <td colSpan="3">F60 Membership add-on: $90/mo</td>
           </tr>
           <tr className="row">
             <td>3 month: $185/mo</td>

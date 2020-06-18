@@ -9,8 +9,8 @@ const JoinUs = props => {
       <h1>Fortitude Strength & Conditioning</h1>
       <p>
         Welcome to Fortitude! Our mission is to empower people to be happier,
-        healthier, and more successful in life. We’re a family first, CrossFit
-        gym second. Whatever your health and fitness goals are, our experienced
+        healthier, and more successful in life. We’re a family first, gym
+        second. Whatever your health and fitness goals are, our experienced
         coaches and supportive members will help you get there. We promise to
         teach you, hold you accountable, and cheer you on every step of the way.
       </p>

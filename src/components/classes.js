@@ -22,7 +22,7 @@ const Classes = props => {
           className="classes__class"
         >
           <div className="classes__content--1">
-            <h3>Fortitude 60</h3>
+            <h3>F60</h3>
             <p>
               Our 60 minute class is high intensity training at it’s finest.
               Workouts combine a variety of functional movements - everything
@@ -36,7 +36,7 @@ const Classes = props => {
             <FaHeartbeat />
           </div>
         </div>
-        <div
+        {/* <div
           data-sal="fade"
           data-sal-duration="500"
           data-sal-easing="ease-in-out"
@@ -46,7 +46,7 @@ const Classes = props => {
             <h3>Pump & Burn</h3>
             <p>
               Our Pump & Burn classes are a great alternative or supplement to
-              Fortitude 60. It's a one-hour class of equal amounts of strength
+              F60. It's a one-hour class of equal amounts of strength
               training (Pump) and conditioning (Burn). PUMP is a total body
               workout that builds solid, lean muscle. An expert trainer will
               guide you through movements that utilize dumbbells, kettlebells,
@@ -57,7 +57,7 @@ const Classes = props => {
           <div className="classes__icon">
             <FaFire />
           </div>
-        </div>
+        </div> */}
         <div
           data-sal="fade"
           data-sal-duration="500"
