@@ -1,9 +1,63 @@
-import React from "react"
+import React, { useState } from "react"
 import Img from "gatsby-image"
 import { Collapse } from "react-collapse"
 import { FaCheckSquare } from "react-icons/fa"
 
 const JoinUs = props => {
+  const [twoWeeks, setTwoWeeks] = useState(false)
+  const [moreInfo, setMoreInfo] = useState(false)
+  const [thankYou, setThankYou] = useState(false)
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    comments: "",
+    reason: "",
+  })
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleInputChange = e => {
+    const { name, value } = e.target
+    setValues({ ...values, [name]: value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...values,
+      }),
+    })
+      .then(() => {
+        setThankYou(
+          "Thanks for getting in touch! We'll reach out shortly to talk about how we can help you start crushing goals."
+        )
+      })
+      .catch(error => console.log(error))
+  }
+
+  const chooseTwoweeks = e => {
+    e.preventDefault()
+    setTwoWeeks(true)
+    setMoreInfo(false)
+    setValues({ ...values, reason: "Two free weeks" })
+  }
+
+  const chooseMoreInfo = e => {
+    e.preventDefault()
+    setTwoWeeks(false)
+    setMoreInfo(true)
+    setValues({ ...values, reason: "More information" })
+  }
   return (
     <div className="joinUs">
       <h1>Fortitude Strength & Conditioning</h1>
@@ -38,7 +92,86 @@ const JoinUs = props => {
       )}
 
       <Collapse isOpened={props.form}>
-        <iframe
+        <form
+          name="fortitude-contact"
+          method="post"
+          data-netlify="true"
+          className="form"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="fortitude-contact" />
+          {!thankYou && (
+            <React.Fragment>
+              <label htmlFor="name">Name</label>
+              <input
+                onChange={handleInputChange}
+                type="text"
+                name="name"
+                placeholder="Your name"
+                value={values.name}
+              />
+
+              <label htmlFor="email">Email</label>
+              <input
+                onChange={handleInputChange}
+                type="email"
+                name="email"
+                placeholder="getfit@crushgoals.com"
+                value={values.email}
+              />
+
+              <label htmlFor="phone">Phone</label>
+              <input
+                onChange={handleInputChange}
+                type="tel"
+                name="phone"
+                placeholder="123-456-7898"
+                value={values.phone}
+              />
+
+              <label htmlFor="comments">Questions/Comments</label>
+              <input
+                onChange={handleInputChange}
+                type="textarea"
+                name="comments"
+                placeholder="Your inquiry..."
+                value={values.comments}
+              />
+
+              <div className="form__buttons">
+                <span>I want...</span>
+                <input
+                  onClick={chooseTwoweeks}
+                  type="button"
+                  value="Two free weeks"
+                  name="reason"
+                  className={
+                    twoWeeks ? "btn btn--form selected" : "btn btn--form"
+                  }
+                />
+                <input
+                  onClick={chooseMoreInfo}
+                  type="button"
+                  value="More info"
+                  name="reason"
+                  className={
+                    moreInfo ? "btn btn--form selected" : "btn btn--form"
+                  }
+                />
+              </div>
+
+              <button type="submit" className="btn btn--primary">
+                Sign me up
+              </button>
+            </React.Fragment>
+          )}
+
+          <Collapse isOpened={thankYou}>
+            <p>{thankYou}</p>
+          </Collapse>
+        </form>
+        {/* <iframe
           src="https://trial-412A73AB.zenplanner.com/zenplanner/portal/sign-up-now.cfm?type=Membership&FRAME=true"
           style={{ width: "100%", height: "500px" }}
           frameBorder="0"
@@ -51,7 +184,7 @@ const JoinUs = props => {
             </a>
           </noframes>{" "}
         </iframe>
-        <script src="https://trial-412A73AB.zenplanner.com/zenplanner/skin/js/resize.js"></script>
+        <script src="https://trial-412A73AB.zenplanner.com/zenplanner/skin/js/resize.js"></script> */}
       </Collapse>
 
       <h2>Do you want to...</h2>

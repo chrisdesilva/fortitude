@@ -11,9 +11,8 @@ a {
   border-bottom: 2px solid lighten($black, 60);
   border-left: 2px solid lighten($black, 60);
   border-right: 2px solid lighten($black, 60);
-  padding: 2rem 4rem 2rem 4rem;
+  padding: 1rem 2rem;
   border-radius: 5px;
-  margin: 0;
 
   &__buttons {
     margin: 0.5rem 0 0.5rem 0;
@@ -29,9 +28,13 @@ a {
 
   input {
     margin-bottom: 0.5rem;
-    max-width: 20rem;
+    width: 15rem;
     padding: 0.5rem;
     border-radius: 5px;
+
+    @include lg {
+      width: 30rem;
+    }
 
     &:focus::-webkit-input-placeholder {
       color: transparent;
