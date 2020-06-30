@@ -101,6 +101,13 @@ const IndexPage = () => {
           }
         }
       }
+      jen: file(relativePath: { eq: "coach_jen.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       andy: file(relativePath: { eq: "coach_andy.jpg" }) {
         childImageSharp {
           fluid {
@@ -162,6 +169,7 @@ const IndexPage = () => {
           alex={data.alex.childImageSharp.fluid}
           corrie={data.corrie.childImageSharp.fluid}
           elma={data.elma.childImageSharp.fluid}
+          jen={data.jen.childImageSharp.fluid}
         />
         <Reviews />
         <div className="bottomPhotos left">

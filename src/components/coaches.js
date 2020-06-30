@@ -209,6 +209,30 @@ const Coaches = props => {
           </p>
         </div>
       </div>
+      <div
+        data-sal="fade"
+        data-sal-duration="500"
+        data-sal-easing="ease-in-out"
+        className="coaches__row"
+      >
+        <div className="coaches__photo">
+          <Img fluid={props.jen} alt="Coach Jen" />
+        </div>
+        <div className="coaches__bio">
+          <h3>Coach Jen</h3>
+          <p>
+            Certifications: CF level 2, CF mobility, phD Evolutionary Biology,
+            IFS Practitioner, Metabolic Flexibility Certification
+          </p>
+          <p>
+            Jen Patterson is a PhD biologist and a Level 2 CrossFit coach. Some
+            of her favorite fitness things are lifting and gymnastics. She's
+            passionate about learning and sharing knowledge, especially when it
+            comes to food and mindset. She'll support you and push your limits
+            at the same time!
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

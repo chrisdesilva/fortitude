@@ -29,7 +29,7 @@ const Schedule = props => {
             <tr>
               <td>
                 5:00am | 6:15am | 7:30am | 12:00pm | 4:15pm | 5:30pm | 6:45pm
-                (MTTh)
+                (T|Th)
               </td>
             </tr>
             <tr>
@@ -77,7 +77,7 @@ const Schedule = props => {
         <table className="schedule--crossfit__table">
           <tbody>
             <tr>
-              <th>Wednesday | Friday</th>
+              <th>Monday | Wednesday | Friday</th>
             </tr>
             <tr>
               <td>6:45pm</td>
