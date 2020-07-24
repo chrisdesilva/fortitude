@@ -22,7 +22,7 @@ const Classes = props => {
           className="classes__class"
         >
           <div className="classes__content--1">
-            <h3>F60</h3>
+            <h3>Group Cross-Training</h3>
             <p>
               Our 60 minute class is high intensity training at it’s finest.
               Workouts combine a variety of functional movements - everything
