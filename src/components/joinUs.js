@@ -87,7 +87,7 @@ const JoinUs = props => {
           <iframe
             width="100%"
             height="640"
-            // style="width: 100%; height: 640px; border: none; max-width: 100%;"
+            // style="wih: 100%; height: 640px; border: none; max-width: 100%;"
             frameborder="0"
             allowfullscreen="true"
             allow="vr,gyroscope,accelerometer,fullscreen"
