@@ -83,7 +83,8 @@ const JoinUs = props => {
       )}
 
       {!props.form && (
-        <div style={{ width: `100%`, margin: `1.45rem 0`, padding: `0 1rem` }}>
+        <div style={{ width: `100%`, margin: `1.45rem 0`, padding: `0` }}>
+          <h2>Take A Virtual Tour Of Our Gym</h2>
           <iframe
             width="100%"
             height="640"
