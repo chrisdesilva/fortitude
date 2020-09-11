@@ -83,13 +83,28 @@ const JoinUs = props => {
       )}
 
       {!props.form && (
+        <div style={{ width: `100%`, margin: `1.45rem 0`, padding: `0` }}>
+          <h2>Take A Virtual Tour Of Our Gym</h2>
+          <iframe
+            width="100%"
+            height="640"
+            // style="wih: 100%; height: 640px; border: none; max-width: 100%;"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="vr,gyroscope,accelerometer,fullscreen"
+            scrolling="no"
+            src="https://kuula.co/share/collection/7PGKv?fs=1&vr=1&autorotate=0.1&thumbs=1&chromeless=1&logo=1&logosize=99"
+          ></iframe>
+        </div>
+      )}
+      {/* {!props.form && (
         <div style={{ width: `100%`, margin: `1.45rem 0`, padding: `0 1rem` }}>
           <Img
             fluid={props.fluid}
             alt="Athletes performing partner deadlifts"
           />
         </div>
-      )}
+      )} */}
 
       <Collapse isOpened={props.form}>
         <form

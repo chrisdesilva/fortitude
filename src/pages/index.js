@@ -157,7 +157,6 @@ const IndexPage = () => {
           form={form}
           showForm={() => {
             showForm(true)
-            gtag_report_conversion("https://strivebastrop.com/")
           }}
         />
         <Schedule scroll={scrollToClasses} />
