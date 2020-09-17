@@ -40,7 +40,7 @@ const Coaches = props => {
           </p>
         </div>
       </div>
-      <div
+      {/* <div
         data-sal="fade"
         data-sal-duration="500"
         data-sal-easing="ease-in-out"
@@ -62,7 +62,7 @@ const Coaches = props => {
             person he trains.
           </p>
         </div>
-      </div>
+      </div> */}
       <div
         data-sal="fade"
         data-sal-duration="500"

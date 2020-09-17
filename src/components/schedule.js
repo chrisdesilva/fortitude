@@ -28,8 +28,7 @@ const Schedule = props => {
             </tr>
             <tr>
               <td>
-                5:00am | 6:15am | 7:30am | 12:00pm | 4:15pm | 5:30pm | 6:45pm
-                (T|Th)
+                6:00am | 7:15am | 12:00pm | 4:15pm | 5:30pm | 6:45pm (T|Th)
               </td>
             </tr>
             <tr>
