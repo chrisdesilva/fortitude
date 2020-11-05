@@ -49,6 +49,7 @@ const JoinUs = props => {
     e.preventDefault()
     setTwoWeeks(true)
     setMoreInfo(false)
+    window !== undefined && window.gtag_report_conversion('https://fortitudeatx.com/')
     setValues({ ...values, reason: "Two free weeks" })
   }
 
@@ -56,6 +57,7 @@ const JoinUs = props => {
     e.preventDefault()
     setTwoWeeks(false)
     setMoreInfo(true)
+    window !== undefined && window.gtag_report_conversion('https://fortitudeatx.com/')
     setValues({ ...values, reason: "More information" })
   }
   return (
