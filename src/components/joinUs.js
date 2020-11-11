@@ -38,6 +38,10 @@ const JoinUs = props => {
       }),
     })
       .then(() => {
+        if (typeof window !== "undefined") {
+          window.gtag("event", "conversion")
+        }
+
         setThankYou(
           "Thanks for getting in touch! We'll reach out shortly to talk about how we can help you start crushing goals."
         )
@@ -49,7 +53,6 @@ const JoinUs = props => {
     e.preventDefault()
     setTwoWeeks(true)
     setMoreInfo(false)
-    window !== undefined && window.gtag_report_conversion('https://fortitudeatx.com/')
     setValues({ ...values, reason: "Two free weeks" })
   }
 
@@ -57,7 +60,6 @@ const JoinUs = props => {
     e.preventDefault()
     setTwoWeeks(false)
     setMoreInfo(true)
-    window !== undefined && window.gtag_report_conversion('https://fortitudeatx.com/')
     setValues({ ...values, reason: "More information" })
   }
   return (

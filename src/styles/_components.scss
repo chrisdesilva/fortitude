@@ -23,6 +23,10 @@ a {
     .btn--form {
       width: 11rem;
       text-align: center;
+
+      &.selected {
+        background-color: $strive-blue;
+      }
     }
   }
 
