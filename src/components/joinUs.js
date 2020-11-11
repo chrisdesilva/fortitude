@@ -39,7 +39,9 @@ const JoinUs = props => {
     })
       .then(() => {
         if (typeof window !== "undefined") {
-          window.gtag("event", "conversion")
+          window.gtag("event", "conversion", {
+            send_to: "AW-987047677/haosCOv_0uYBEP3N1NYD",
+          })
         }
 
         setThankYou(
