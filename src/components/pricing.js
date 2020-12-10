@@ -23,9 +23,9 @@ const Pricing = () => {
             <th colSpan="3">Punch Cards</th>
           </tr>
           <tr className="row">
-            <td>10 classes: $161</td>
+            <td>10 classes: $200</td>
             <td></td>
-            <td>20 classes: $261</td>
+            <td>20 classes: $320</td>
           </tr>
           <tr>
             <th colSpan="3">Barbell</th>
