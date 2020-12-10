@@ -10,7 +10,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,6 +28,12 @@ module.exports = {
         start_url: `/`,
         display: `minimal-ui`,
         icon: `src/images/texas_logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
       },
     },
     {
