@@ -32,11 +32,7 @@ const Pricing = () => {
           </tr>
           <tr className="row">
             <td colSpan="3">Membership add-on: $90/mo</td>
-          </tr>
-          <tr className="row">
-            <td>3 month: $185/mo</td>
-            <td>6 month: $170/mo</td>
-            <td>12 month: $160/mo</td>
+            <td colSpan="3">Unlimited: $160/mo</td>
           </tr>
         </tbody>
       </table>
