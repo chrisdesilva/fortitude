@@ -262,7 +262,7 @@ const IndexPage = () => {
       <footer className="footer">
         <div className="footer__links">
           <a
-            href="https://www.facebook.com/FortitudeFitness/"
+            href="https://www.facebook.com/FortitudeATX/"
             target="_blank"
             rel="noreferrer noopener"
           >
